@@ -1,14 +1,13 @@
 import React from 'react'
 
-const WorkExperienceSection = () => {
+const EducationSection = () => {
     return (
         <>
-            <div id='workExperience' className='bg-red px-25 mx-16 mt-15 animate-blur-out-3 '>
+            <div id='education' className='bg-red px-25 mx-16 mt-15 animate-blur-out-3 '>
                 <h1 className="text-3xl font-bold text-gray-900 dark:text-white animate-slide-in-up-3">
-                    Work Experience
+                    Education
                 </h1>
                 <div className='pl-2'>
-
                     <div className="flex items-center gap-6 mt-6 animate-slide-in-up-3">
                         {/* Column 1: Logo */}
                         <div className="shrink-0">
@@ -50,11 +49,11 @@ const WorkExperienceSection = () => {
                             <p className="text-gray-600 dark:text-gray-300">Nov 2024 - Feb 2025</p>
                         </div>
                     </div>
-                  
+                    
                 </div>
             </div>
         </>
     )
 }
 
-export default WorkExperienceSection
+export default EducationSection
