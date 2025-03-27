@@ -4,7 +4,7 @@ import React from 'react'
 const SkillsSections = () => {
     return (
         <>
-            <div id='workExperience' className='bg-red px-25 mx-16 mt-15 animate-blur-out-3 '>
+            <div id='skills' className='bg-red px-25 mx-16 mt-15 animate-blur-out-3 '>
                 <h1 className="text-3xl font-bold text-gray-900 dark:text-white animate-slide-in-up-3">
                     Skills
                 </h1>
@@ -27,8 +27,8 @@ const SkillsSections = () => {
 
                     {/* Backend Row */}
                     <div className="flex items-center gap-4">
-                        <span className="font-bold text-xl min-w-[80px]">Backend:</span>
-                        <div className="flex flex-wrap gap-2">
+                        <span className="font-bold text-xl min-w-[80px] ">Backend:</span>
+                        <div className="flex flex-wrap gap-2 ml-1">
                             <Badge>Node.js</Badge>
                             <Badge>Express</Badge>
                             <Badge>Python</Badge>
@@ -44,7 +44,7 @@ const SkillsSections = () => {
                     {/* DevOps Row */}
                     <div className="flex items-center gap-4">
                         <span className="font-bold text-xl min-w-[80px]">DevOps:</span>
-                        <div className="flex flex-wrap gap-2">
+                        <div className="flex flex-wrap gap-2 ml-2">
                             <Badge>Docker</Badge>
                             <Badge>Kubernetes</Badge>
                             <Badge>AWS</Badge>
@@ -60,7 +60,7 @@ const SkillsSections = () => {
                     {/* AI/ML Row */}
                     <div className="flex items-start gap-4">
                         <span className="font-bold text-xl min-w-[80px]">AI/ML:</span>
-                        <div className="flex flex-wrap gap-2">
+                        <div className="flex flex-wrap gap-2 ml-2">
                             <Badge>Python</Badge>
                             <Badge>TensorFlow</Badge>
                             <Badge>PyTorch</Badge>

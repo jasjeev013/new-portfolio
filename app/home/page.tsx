@@ -6,6 +6,9 @@ import AboutSection from '../components/AboutSection'
 import WorkExperienceSection from '../components/WorkExperienceSection'
 import EducationSection from '../components/EducationSection'
 import SkillsSections from '../components/SkillsSections'
+import Project from '../components/Project'
+import HackathonsSection from '../components/HackathonsSection'
+import ContactMe from '../components/ContactMe'
 
 
 const page = () => {
@@ -19,6 +22,9 @@ const page = () => {
                     <WorkExperienceSection />
                     <EducationSection/>
                     <SkillsSections/>
+                    <Project/>
+                    <HackathonsSection/>
+                    <ContactMe/>
                 </div>
             </div>
         </>
