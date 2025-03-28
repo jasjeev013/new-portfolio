@@ -9,6 +9,7 @@ import SkillsSections from '../components/SkillsSections'
 import Project from '../components/Project'
 import HackathonsSection from '../components/HackathonsSection'
 import ContactMe from '../components/ContactMe'
+import FooterSection from '../components/FooterSection'
 
 
 const page = () => {
@@ -25,6 +26,7 @@ const page = () => {
                     <Project/>
                     <HackathonsSection/>
                     <ContactMe/>
+                    <FooterSection/>
                 </div>
             </div>
         </>

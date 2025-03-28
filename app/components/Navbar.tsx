@@ -1,19 +1,15 @@
 "use client"; // Mark this as a client component
 
 import Link from "next/link";
-import { useEffect, useState } from "react"; // For managing client-side state
+import { faGithub, faGoogle, faLinkedin, faXTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faComment, faEnvelope, faFolder, faHouse, faLink, faLocationDot, faPuzzlePiece, faSuitcase } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useState } from "react"; // For managing client-side state
 
 const Navbar = () => {
-  const [isMounted, setIsMounted] = useState(false);
+
   const [isHovered, setIsHovered] = useState(false);
 
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
-  if (!isMounted) {
-    return null;
-  }
 
   return (
     <nav 
@@ -31,31 +27,32 @@ const Navbar = () => {
               href="/home"
               className="group text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-300 transition-all duration-300"
             >
-              <i className="fa-solid fa-house fa-lg text-black dark:text-[#CFCFCF] group-hover:mx-2 transition-all duration-300"></i>
+              {/* text-black dark:text-[#CFCFCF] group-hover:mx-2 transition-all duration-300 */}
+              <FontAwesomeIcon icon={faHouse} size='xl' className="text-black dark:text-[#CFCFCF] group-hover:mx-2 transition-all duration-300" />
             </Link>
             <Link
               href="#workExperience"
               className="group text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-300 transition-all duration-300"
             >
-              <i className="fa-solid fa-suitcase fa-lg text-black dark:text-[#CFCFCF] group-hover:mx-2 transition-all duration-300"></i>
+              <FontAwesomeIcon icon={faSuitcase} size='xl' className="text-black dark:text-[#CFCFCF] group-hover:mx-2 transition-all duration-300" />
             </Link>
             <Link
               href="/projects"
               className="group text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-300 transition-all duration-300"
             >
-              <i className="fa-solid fa-folder fa-lg text-black dark:text-[#CFCFCF] group-hover:mx-2 transition-all duration-300"></i>
+              <FontAwesomeIcon icon={faFolder} size='xl' className="text-black dark:text-[#CFCFCF] group-hover:mx-2 transition-all duration-300" />
             </Link>
             <Link
               href="/projects"
               className="group text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-300 transition-all duration-300"
             >
-              <i className="fa-solid fa-puzzle-piece fa-lg text-black dark:text-[#CFCFCF] group-hover:mx-2 transition-all duration-300"></i>
+              <FontAwesomeIcon icon={faPuzzlePiece} size='xl' className="text-black dark:text-[#CFCFCF] group-hover:mx-2 transition-all duration-300" />
             </Link>
             <Link
               href="/chat"
               className="group text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-300 transition-all duration-300"
             >
-              <i className="fa-solid fa-comments fa-lg text-black dark:text-[#CFCFCF] group-hover:mx-2 transition-all duration-300"></i>
+              <FontAwesomeIcon icon={faComment} size='xl' className="text-black dark:text-[#CFCFCF] group-hover:mx-2 transition-all duration-300" />
             </Link>
           </div>
         </div>
