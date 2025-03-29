@@ -3,7 +3,7 @@ import React from 'react'
 const AboutSection = () => {
     return (
         <>
-            <div className='bg-red px-25 ml-16 mr-16 mt-20  animate-blur-out-2'>
+            <div className='bg-red lg:px-25 ml-16 mr-16 mt-20 md:px-0 sm:px-0 animate-blur-out-2'>
                 <h1 className="text-3xl font-bold text-gray-900 dark:text-white animate-slide-in-up-2">
                     About Me
                 </h1>

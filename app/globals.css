@@ -175,3 +175,39 @@
 .animate-blur-out-3 {
   animation: blurOut 3s ease-out forwards;
 }
+
+@keyframes wave-jitter {
+  0%, 100% {
+    transform: rotate(-10deg);
+  }
+  20% {
+    transform: rotate(12deg);
+  }
+  40% {
+    transform: rotate(-10deg);
+  }
+  60% {
+    transform: rotate(12deg);
+  }
+  80% {
+    transform: rotate(-10deg);
+  }
+}
+
+.waving-hand {
+  display: inline-block;
+  animation: wave-jitter 1.5s infinite;
+  transform-origin: 80% 80%;
+}
+
+/* globals.css */
+
+/* Custom breakpoints */
+@custom-media --xs-viewport (min-width: 400px);
+@custom-media --sm-viewport (min-width: 640px);
+@custom-media --md-viewport (min-width: 768px);
+@custom-media --lg-viewport (min-width: 1024px);
+@custom-media --xl-viewport (min-width: 1280px);
+@custom-media --2xl-viewport (min-width: 1536px);
+
+
