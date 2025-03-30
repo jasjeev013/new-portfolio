@@ -3,7 +3,7 @@ import React from 'react'
 const EducationSection = () => {
     return (
         <>
-            <div id='education' className='bg-red lg:px-25 mx-16 mt-15 md:px-0  sm:px-0 animate-blur-out-3 '>
+            <div id='education' className='bg-red lg:px-25 ml-5 md:ml-16 mt-15 md:px-0  sm:px-0 animate-blur-out-3 '>
                 <h1 className="text-3xl font-bold text-gray-900 dark:text-white animate-slide-in-up-3">
                     Education
                 </h1>

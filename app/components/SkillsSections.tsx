@@ -4,13 +4,13 @@ import React from 'react'
 const SkillsSections = () => {
     return (
         <>
-            <div id='skills' className='bg-red lg:px-25 md:px-0 sm:px-0 mx-16 mt-15 animate-blur-out-3 '>
+            <div id='skills' className='bg-red lg:px-25 md:px-0 sm:px-0 ml-5 md:ml-16 mt-15 animate-blur-out-3 '>
                 <h1 className="text-3xl font-bold text-gray-900 dark:text-white animate-slide-in-up-3">
                     Skills
                 </h1>
                 <div className="space-y-3 px-5 mt-5 ">
                     {/* Frontend Row */}
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-start sm:items-center flex-col sm:flex-row gap-4">
                         <span className="font-bold text-xl min-w-[80px]">Frontend:</span>
                         <div className="flex flex-wrap gap-2">
                             <Badge>React</Badge>
@@ -26,7 +26,7 @@ const SkillsSections = () => {
                     </div>
 
                     {/* Backend Row */}
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-start sm:items-center flex-col sm:flex-row gap-4">
                         <span className="font-bold text-xl min-w-[80px] ">Backend:</span>
                         <div className="flex flex-wrap gap-2 ml-1">
                             <Badge>Node.js</Badge>
@@ -42,7 +42,7 @@ const SkillsSections = () => {
                     </div>
 
                     {/* DevOps Row */}
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-start sm:items-center flex-col sm:flex-row gap-4">
                         <span className="font-bold text-xl min-w-[80px]">DevOps:</span>
                         <div className="flex flex-wrap gap-2 ml-2">
                             <Badge>Docker</Badge>
@@ -58,7 +58,7 @@ const SkillsSections = () => {
                     </div>
 
                     {/* AI/ML Row */}
-                    <div className="flex items-start gap-4">
+                    <div className="flex items-start sm:items-center flex-col sm:flex-row gap-4">
                         <span className="font-bold text-xl min-w-[80px]">AI/ML:</span>
                         <div className="flex flex-wrap gap-2 ml-2">
                             <Badge>Python</Badge>
