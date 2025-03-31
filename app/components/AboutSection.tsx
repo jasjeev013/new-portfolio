@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 const AboutSection = () => {
@@ -7,7 +8,7 @@ const AboutSection = () => {
                 <h1 className="text-3xl font-bold text-gray-900 dark:text-white animate-slide-in-up-2">
                     About Me
                 </h1>
-                <p className='text-md mt-2 animate-slide-in-up-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, neque quos perspiciatis, natus voluptates sapiente dolore a, quidem doloremque est nemo? Laboriosam nobis doloremque, alias nisi illo optio, corporis labore sunt repellat, tenetur quam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex reiciendis atque ducimus? Ullam molestiae corrupti aliquid magni delectus iusto rerum animi maxime, nisi quod non, harum nobis cumque odio ad numquam mollitia repellendus facilis!</p>
+                <p className='text-md mt-2 test-black dark:text-gray-300  animate-slide-in-up-2'>I'm Jasjeev Singh, an undergrad at <Link href='https://mait.ac.in/' target='_blank' className='text-black dark:text-white'>Maharaja Agrasen Institute of Technology</Link> , pursuing a B.Tech. I specialize in Java and Spring Boot, building scalable websites. As a Smart India Hackathon finalist and a two-year Google Cloud Study Jam participant, I’m currently exploring AI/ML. Outside of tech, I’m a graphic designer, video editor, and a chess enthusiast with a 900 rating.</p>
             </div>
         </>
     )

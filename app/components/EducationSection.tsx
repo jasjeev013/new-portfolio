@@ -9,47 +9,49 @@ const EducationSection = () => {
                 </h1>
                 <div className='pl-2'>
                     <div className="flex items-center gap-6 mt-6 animate-slide-in-up-3">
-                        {/* Column 1: Logo */}
+
                         <div className="shrink-0">
-                            <div className="w-16 h-16 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
-                                {/* Replace with your logo */}
-                                <span className="text-lg">LOGO</span>
+                            <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center">
+
+                                <img src="/education/mait.jpeg" alt="Mait" className='w-full h-full rounded-full' />
                             </div>
                         </div>
 
-                        {/* Column 2: Heading with subheading (left aligned) */}
-                        <div className="flex-1">
-                            <h2 className="text-xl font-semibold text-gray-900 dark:text-white">Sopra Steria</h2>
-                            <p className="text-gray-600 dark:text-gray-300">Java Backend Developer</p>
+
+                        <div className="flex-2">
+                            <h2 className="text-xl font-semibold text-gray-900 dark:text-white">Maharaja Agrasen Institute of Technology</h2>
+                            <p className="text-gray-600 dark:text-gray-300">Bachelors of Technology in Information Technology(IT)</p>
+                            <p className="text-gray-600 dark:text-gray-300 sm:hidden block">Nov 2022 - Jun 2026</p>
                         </div>
 
-                        {/* Column 3: Second subheading (left aligned) */}
-                        <div className="flex-1 text-right ">
-                            <p className="text-gray-600 dark:text-gray-300">Nov 2024 - Feb 2025</p>
+                        <div className="flex-1 text-right sm:block hidden">
+                            <p className="text-gray-600 dark:text-gray-300">Nov 2022 - Jun 2026</p>
                         </div>
                     </div>
-
                     <div className="flex items-center gap-6 mt-6 animate-slide-in-up-3">
-                        {/* Column 1: Logo */}
-                        <div className="shrink-0">
-                            <div className="w-16 h-16 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
-                                {/* Replace with your logo */}
-                                <span className="text-lg">LOGO</span>
+
+                        <div className="shrink-0 ">
+                            <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center">
+
+                                <img src="/education/newEra.jfif" alt="Mait" className='w-full h-full rounded-full' />
                             </div>
                         </div>
 
-                        {/* Column 2: Heading with subheading (left aligned) */}
-                        <div className="flex-1">
-                            <h2 className="text-xl font-semibold text-gray-900 dark:text-white">Sopra Steria</h2>
-                            <p className="text-gray-600 dark:text-gray-300">Java Backend Developer</p>
+
+                        <div className="flex-2">
+                            <h2 className="text-xl font-semibold text-gray-900 dark:text-white">New Era Public School</h2>
+                            <p className="text-gray-600 dark:text-gray-300">High School Secondary Education - CBSE</p>
+                       
+                            <p className="text-gray-600 dark:text-gray-300 sm:hidden block">Mar 2021 - Mar 2022</p>
                         </div>
 
-                        {/* Column 3: Second subheading (left aligned) */}
-                        <div className="flex-1 text-right ">
-                            <p className="text-gray-600 dark:text-gray-300">Nov 2024 - Feb 2025</p>
+                        <div className="flex-1 text-right sm:block hidden ">
+                            <p className="text-gray-600 dark:text-gray-300">Mar 2021 - Mar 2022</p>
                         </div>
                     </div>
-                    
+
+
+
                 </div>
             </div>
         </>

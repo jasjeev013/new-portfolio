@@ -12,7 +12,7 @@ const SkillsSections = () => {
                     {/* Frontend Row */}
                     <div className="flex items-start sm:items-center flex-col sm:flex-row gap-4">
                         <span className="font-bold text-xl min-w-[80px]">Frontend:</span>
-                        <div className="flex flex-wrap gap-2">
+                        <div className="flex flex-wrap gap-2 ml-3">
                             <Badge>React</Badge>
                             <Badge>HTML</Badge>
                             <Badge>CSS</Badge>
@@ -20,31 +20,42 @@ const SkillsSections = () => {
                             <Badge>JavaScript</Badge>
                             <Badge>TypeScript</Badge>
                             <Badge>Next.js</Badge>
-                            <Badge>Vue</Badge>
-                            <Badge>Svelte</Badge>
                         </div>
                     </div>
 
                     {/* Backend Row */}
                     <div className="flex items-start sm:items-center flex-col sm:flex-row gap-4">
                         <span className="font-bold text-xl min-w-[80px] ">Backend:</span>
-                        <div className="flex flex-wrap gap-2 ml-1">
+                        <div className="flex flex-wrap gap-2 ml-4">
                             <Badge>Node.js</Badge>
                             <Badge>Express</Badge>
                             <Badge>Python</Badge>
                             <Badge>Django</Badge>
                             <Badge>Flask</Badge>
-                            <Badge>Ruby on Rails</Badge>
+                      
                             <Badge>Java</Badge>
                             <Badge>Spring Boot</Badge>
                             <Badge>PHP</Badge>
                         </div>
                     </div>
 
+                    {/* Database Row */}
+                    <div className="flex items-start sm:items-center flex-col sm:flex-row gap-4">
+                        <span className="font-bold text-xl min-w-[80px]">Database:</span>
+                        <div className="flex flex-wrap gap-2 ml-2">
+                            <Badge>MySQL</Badge>
+                            <Badge>MongoDB</Badge>
+                            <Badge>PostgreSQL</Badge>
+                            <Badge>Redis</Badge>
+                            <Badge>Firebase</Badge>
+                            <Badge>AWS RDS</Badge>
+                     
+                        </div>
+                    </div>
                     {/* DevOps Row */}
                     <div className="flex items-start sm:items-center flex-col sm:flex-row gap-4">
                         <span className="font-bold text-xl min-w-[80px]">DevOps:</span>
-                        <div className="flex flex-wrap gap-2 ml-2">
+                        <div className="flex flex-wrap gap-2 ml-5">
                             <Badge>Docker</Badge>
                             <Badge>Kubernetes</Badge>
                             <Badge>AWS</Badge>
@@ -58,9 +69,9 @@ const SkillsSections = () => {
                     </div>
 
                     {/* AI/ML Row */}
-                    <div className="flex items-start sm:items-center flex-col sm:flex-row gap-4">
+                    <div className="flex items-start sm:items-center lg:items-start flex-col sm:flex-row gap-4">
                         <span className="font-bold text-xl min-w-[80px]">AI/ML:</span>
-                        <div className="flex flex-wrap gap-2 ml-2">
+                        <div className="flex flex-wrap gap-2 ml-5">
                             <Badge>Python</Badge>
                             <Badge>TensorFlow</Badge>
                             <Badge>PyTorch</Badge>

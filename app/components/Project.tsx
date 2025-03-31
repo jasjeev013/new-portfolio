@@ -6,46 +6,52 @@ const Project = () => {
 
     const projects = [
         {
-            videoUrl: "/videos/ecommerce-demo.mp4",
+            videoUrl: "https://res.cloudinary.com/dfhj4i9hd/video/upload/v1722333922/portfolio/csi_sn5jxx.mov",
             posterUrl: "/thumbnails/ecommerce-thumb.jpg",
-            title: "E-commerce Platform",
+            title: "Hustle Hub: The Authentic Scheduler",
             description: "A full-featured online store with payment integration.",
-            technologies: ["React", "Node.js", "MongoDB"]
+            technologies: ["React", "Node.js", "MongoDB"],
+            links: ["GitHub", "Live Demo"]
         },
         {
             videoUrl: "/videos/taskapp-demo.mp4",
             posterUrl: "/thumbnails/taskapp-thumb.jpg",
-            title: "Task Management App",
+            title: "Neighbourly: Let's Connect Communities",
             description: "Productivity application with team collaboration.",
-            technologies: ["TypeScript", "Next.js", "Firebase"]
+            technologies: ["TypeScript", "Next.js", "Firebase"],
+            links: ["GitHub", "Live Demo"]
         },
         {
             videoUrl: "/videos/weather-demo.mp4",
             posterUrl: "/thumbnails/weather-thumb.jpg",
-            title: "Weather Dashboard",
+            title: "Phishing Detection System",
             description: "Real-time weather information with forecasts.",
-            technologies: ["React", "API Integration", "Chart.js"]
+            technologies: ["React", "API Integration", "Chart.js"],
+            links: ["GitHub", "Live Demo"]
         },
         {
             videoUrl: "/videos/weather-demo.mp4",
             posterUrl: "/thumbnails/weather-thumb.jpg",
-            title: "Weather Dashboard",
+            title: "Bharat Ranch",
             description: "Real-time weather information with forecasts.",
-            technologies: ["React", "API Integration", "Chart.js"]
+            technologies: ["React", "API Integration", "Chart.js"],
+            links: ["GitHub", "Live Demo"]
         },
         {
             videoUrl: "/videos/weather-demo.mp4",
             posterUrl: "/thumbnails/weather-thumb.jpg",
-            title: "Weather Dashboard",
+            title: "Memory Hub",
             description: "Real-time weather information with forecasts.",
-            technologies: ["React", "API Integration", "Chart.js"]
+            technologies: ["React", "API Integration", "Chart.js"],
+            links: ["GitHub", "Live Demo"]
         },
         {
             videoUrl: "/videos/weather-demo.mp4",
             posterUrl: "/thumbnails/weather-thumb.jpg",
-            title: "Weather Dashboard",
+            title: "OneLife: THe God's Own",
             description: "Real-time weather information with forecasts.",
-            technologies: ["React", "API Integration", "Chart.js"]
+            technologies: ["React", "API Integration", "Chart.js"],
+            links: ["GitHub", "Live Demo"]
         },
         // Add more projects as needed
     ];
@@ -55,10 +61,9 @@ const Project = () => {
                 <h1 className="text-3xl font-bold text-gray-900 dark:text-white animate-slide-in-up-3">
                     Projects
                 </h1>
-                <div className="container mx-auto px-4 py-12">
-                    <h2 className="text-3xl font-bold mb-8 text-center text-gray-900 dark:text-white">My Projects</h2>
+                <div className="container mx-auto px-6 py-12">
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 p-2 lg:grid-cols-2 gap-5">
                         {projects.map((project, index) => (
                             <ProjectCard
                                 key={index}
@@ -67,6 +72,7 @@ const Project = () => {
                                 title={project.title}
                                 description={project.description}
                                 technologies={project.technologies}
+                                links={project.links}
                             />
                         ))}
                     </div>

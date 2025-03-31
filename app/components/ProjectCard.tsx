@@ -7,10 +7,11 @@ interface ProjectCardProps {
     title: string;
     description: string;
     technologies: string[];
+    links: string[]; // Array of links
     posterUrl?: string; // Optional thumbnail image
   }
   
-  const ProjectCard = ({ videoUrl, title, description, technologies, posterUrl }: ProjectCardProps) => {
+  const ProjectCard = ({ videoUrl, title, description, technologies,links, posterUrl }: ProjectCardProps) => {
     const videoRef = useRef<HTMLVideoElement>(null);
   
     const handleMouseEnter = () => {
@@ -34,15 +35,15 @@ interface ProjectCardProps {
             ref={videoRef}
             src={videoUrl}
             poster={posterUrl}
+            autoPlay
+
             muted
             loop
             playsInline
             className="w-full h-full object-cover"
             controls={false} // We'll handle controls via hover
           />
-          <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-30">
-            <span className="text-white text-sm font-medium">Hover to play</span>
-          </div>
+          
         </div>
         
         {/* Project Content */}
@@ -56,7 +57,17 @@ interface ProjectCardProps {
               <Badge 
                 key={tech}
                 variant="outline"
-                className="text-sm font-medium text-gray-700 dark:text-gray-200 bg-gray-100 dark:bg-gray-800"
+                className="text-sm font-small text-gray-700 dark:text-gray-200 bg-gray-100 dark:bg-gray-800"
+              >
+                {tech}
+              </Badge>
+            ))}
+          </div>
+          <div className="flex flex-wrap gap-2 mt-4">
+            {links.map((tech) => (
+              <Badge 
+                key={tech}
+                
               >
                 {tech}
               </Badge>

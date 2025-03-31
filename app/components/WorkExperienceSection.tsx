@@ -10,50 +10,47 @@ const WorkExperienceSection = () => {
                 <div className='pl-2'>
 
                     <div className="flex items-center gap-6 mt-6 animate-slide-in-up-3">
-                        {/* Column 1: Logo */}
+          
                         <div className="shrink-0">
-                            <div className="w-16 h-16 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
-                                {/* Replace with your logo */}
-                                <span className="text-lg">LOGO</span>
+                            <div className="w-16 h-16 rounded-full bg-white dark:bg-whiteflex items-center justify-center">
+      
+                                <img src="/workExperience/sopra_steria.png" alt="Logo" className='  rounded-full' />
                             </div>
                         </div>
 
-                        {/* Column 2: Heading with subheading (left aligned) */}
+       
                         <div className="flex-1">
                             <h2 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white">Sopra Steria</h2>
                             <p className="text-md sm:text-lg text-gray-600 dark:text-gray-300">Java Backend Developer</p>
-                            <p className="text-gray-600 dark:text-gray-300 sm:hidden block  ">Nov 2024 - Feb 2025</p>
+                            <p className="text-gray-600 dark:text-gray-300 sm:hidden block  ">Aug 2024 - Dec 2024</p>
                         </div>
 
-                        {/* Column 3: Second subheading (left aligned) */}
+         
                         <div className="flex-1 text-right sm:block hidden">
-                            <p className="text-gray-600 dark:text-gray-300 ">Nov 2024 - Feb 2025</p>
+                            <p className="text-gray-600 dark:text-gray-300 ">Aug 2024 - Dec 2024</p>
                         </div>
                     </div>
                     <div className="flex items-center gap-6 mt-6 animate-slide-in-up-3">
-                        {/* Column 1: Logo */}
+
                         <div className="shrink-0">
-                            <div className="w-16 h-16 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
-                                {/* Replace with your logo */}
-                                <span className="text-lg">LOGO</span>
+                            <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center">
+                
+                                <img src="/workExperience/ibm.jpg" alt="Logo" className='  rounded-full' />
                             </div>
                         </div>
 
-                        {/* Column 2: Heading with subheading (left aligned) */}
+       
                         <div className="flex-1">
-                            <h2 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white">Sopra Steria</h2>
-                            <p className="text-md sm:text-lg text-gray-600 dark:text-gray-300">Java Backend Developer</p>
-                            <p className="text-gray-600 dark:text-gray-300 sm:hidden block  ">Nov 2024 - Feb 2025</p>
+                            <h2 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white">IBM SkillsBuild</h2>
+                            <p className="text-md sm:text-lg text-gray-600 dark:text-gray-300">Data Analytics Intern</p>
+                            <p className="text-gray-600 dark:text-gray-300 sm:hidden block  ">Nov 2023 - Dec 2023</p>
                         </div>
 
-                        {/* Column 3: Second subheading (left aligned) */}
+                 
                         <div className="flex-1 text-right sm:block hidden">
-                            <p className="text-gray-600 dark:text-gray-300 ">Nov 2024 - Feb 2025</p>
+                            <p className="text-gray-600 dark:text-gray-300 ">Nov 2023 - Dec 2023</p>
                         </div>
                     </div>
-
-                   
-                  
                 </div>
             </div>
         </>
