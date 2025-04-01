@@ -59,7 +59,7 @@ const HackathonsSection = () => {
                             <p className="text-gray-600 dark:text-gray-300 ">Nov 2024 - Feb 2025</p>
                         </div>
                     </div>
-                    
+
                     <div className="flex items-start gap-6 mt-6 animate-slide-in-up-3">
                         {/* Column 1: Logo */}
                         <div className="shrink-0">

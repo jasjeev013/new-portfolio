@@ -16,17 +16,17 @@ const page = () => {
     return (
         <>
             <div className="w-full min-h-screen flex items-center justify-center bg-[#F0E3E3] dark:bg-[#010304] ">
-                <div className=" w-full xl:w-[calc(100%-25rem)] lg:w-[calc(100%-2rem)] md:w-full sm:w-full  min-h-screen lg:border-l-[1px] lg:border-r-[1px] lg:border-white/30 sm:p-4 ">
+                <div className=" w-full xl:w-[calc(75rem)] lg:w-[calc(100%-2rem)] md:w-full sm:w-full  min-h-screen lg:border-l-[1px] lg:border-r-[1px] lg:border-white/30 sm:p-4 ">
                     <Navbar />
                     <IntroductionSection />
                     <AboutSection />
                     <WorkExperienceSection />
-                    <EducationSection/>
-                    <SkillsSections/>
-                    <Project/>
-                    <HackathonsSection/>
-                    <ContactMe/>
-                    <FooterSection/>
+                    <EducationSection />
+                    <SkillsSections />
+                    <Project />
+                    <HackathonsSection />
+                    <ContactMe />
+                    <FooterSection />
                 </div>
             </div>
         </>

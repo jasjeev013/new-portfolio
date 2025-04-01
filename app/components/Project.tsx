@@ -6,12 +6,12 @@ const Project = () => {
 
     const projects = [
         {
-            videoUrl: "https://res.cloudinary.com/dfhj4i9hd/video/upload/v1722333922/portfolio/csi_sn5jxx.mov",
+            videoUrl: "/projectVideos/hustleHub.mp4",
             posterUrl: "/thumbnails/ecommerce-thumb.jpg",
             title: "Hustle Hub: The Authentic Scheduler",
-            description: "A full-featured online store with payment integration.",
-            technologies: ["React", "Node.js", "MongoDB"],
-            links: ["GitHub", "Live Demo"]
+            description: "Task management system with authentication, task tracking, prioritization, categorization, and notifications for seamless productivity.",
+            technologies: ["Angular","NgRx","Spring Boot","Spring Data JPA","JWT","PostgreSQL","Git","Github","AWS EC2"],
+            links: ["GitHub"]
         },
         {
             videoUrl: "/videos/taskapp-demo.mp4",
@@ -61,9 +61,9 @@ const Project = () => {
                 <h1 className="text-3xl font-bold text-gray-900 dark:text-white animate-slide-in-up-3">
                     Projects
                 </h1>
-                <div className="container mx-auto px-6 py-12">
+                <div className="container mx-auto px-14 py-12">
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 p-2 lg:grid-cols-2 gap-5">
+                    <div className="grid grid-cols-1 md:grid-cols-2 p-2 lg:grid-cols-2 gap-7">
                         {projects.map((project, index) => (
                             <ProjectCard
                                 key={index}

@@ -1,7 +1,7 @@
 "use client"; // Mark this as a client component
 
 import Link from "next/link";
-import { faComment, faEnvelope, faFolder, faHouse, faPuzzlePiece, faSuitcase } from '@fortawesome/free-solid-svg-icons';
+import { faComment, faFolder, faHouse, faPuzzlePiece, faSuitcase } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from "react"; // For managing client-side state
 
