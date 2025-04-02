@@ -29,6 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="shortcut icon" href="/logo_jsk.png" />
         <script
           src="https://kit.fontawesome.com/9f0ae78aa4.js"
           crossOrigin="anonymous"

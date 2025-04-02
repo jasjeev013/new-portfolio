@@ -3,15 +3,17 @@ import { Badge } from "@/components/ui/badge";
 import { useRef } from "react";
 
 interface ProjectCardProps {
+  key: number; // Unique key for each project card
   videoUrl: string;
   title: string;
   description: string;
   technologies: string[];
   links: string[]; // Array of links
   posterUrl?: string; // Optional thumbnail image
+  linksName: string[]; // Array of link names
 }
 
-const ProjectCard = ({ videoUrl, title, description, technologies, links, posterUrl }: ProjectCardProps) => {
+const ProjectCard = ({ key, videoUrl, title, description, technologies, links, linksName, posterUrl }: ProjectCardProps) => {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const handleMouseEnter = () => {
@@ -53,9 +55,9 @@ const ProjectCard = ({ videoUrl, title, description, technologies, links, poster
 
         {/* Technology Badges */}
         <div className="flex flex-wrap gap-2">
-          {technologies.map((tech) => (
+          {technologies.map((tech, index) => (
             <Badge
-              key={tech}
+              key={index}
               variant="outline"
               className="text-xs font-small text-gray-700 dark:text-gray-200 bg-gray-100 dark:bg-gray-800"
             >
@@ -64,9 +66,10 @@ const ProjectCard = ({ videoUrl, title, description, technologies, links, poster
           ))}
         </div>
         <div className="flex flex-wrap gap-2 mt-4">
-          {links.map((tech) => (
-            <a target="_blank" href="https://github.com/jasjeev013/hustle-hub">
-              <Badge key={tech}> {tech} </Badge>
+          {linksName.map((tech, index) => (
+
+            <a target="_blank" key={index} href={links[index]}>
+              <Badge key={index}> {tech} </Badge>
             </a>
           ))}
         </div>

@@ -37,3 +37,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 
 <!-- bun add tailwindcss postcss autoprefixer -->
+<!-- dark light mode button -->
+<!-- Fade in animation -->

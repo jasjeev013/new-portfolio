@@ -9,17 +9,19 @@ const Project = () => {
             videoUrl: "/projectVideos/hustleHub.mp4",
             posterUrl: "/thumbnails/ecommerce-thumb.jpg",
             title: "Hustle Hub: The Authentic Scheduler",
-            description: "Task management system with authentication, task tracking, prioritization, categorization, and notifications for seamless productivity.",
+            description: "A Task Management System with secure authentication, task tracking, prioritization, categorization, and notifications. It helps users stay organized, prioritize tasks, and receive timely updates, ensuring smooth and efficient productivity.",
             technologies: ["Angular","NgRx","Spring Boot","Spring Data JPA","JWT","PostgreSQL","Git","Github","AWS EC2"],
-            links: ["GitHub"]
+            linksName: ["GitHub"],
+            links: ["https://github.com/jasjeev013/hustle-hub"]
         },
         {
             videoUrl: "/videos/taskapp-demo.mp4",
             posterUrl: "/thumbnails/taskapp-thumb.jpg",
             title: "Neighbourly: Let's Connect Communities",
-            description: "Productivity application with team collaboration.",
-            technologies: ["TypeScript", "Next.js", "Firebase"],
-            links: ["GitHub", "Live Demo"]
+            description: "Neighbourly connects people by allowing them to create, publish, and participate in events like hackathons, contests, and social services. Users can register, volunteer, and clarify doubts, promoting community engagement.",
+            technologies: ["React","Recoil","Tailwind CSS","Node.js","Express.js","MongoDB","Git","Github"],
+            linksName: ["GitHub (Frontend)","GitHub (Backend)", "Live Demo"],
+            links: ["https://github.com/jasjeev013/neighbouly-frontend","https://github.com/jasjeev013/neighbourly-backend","https://neighbourly-ebon.vercel.app/"]
         },
         {
             videoUrl: "/videos/weather-demo.mp4",
@@ -27,7 +29,8 @@ const Project = () => {
             title: "Phishing Detection System",
             description: "Real-time weather information with forecasts.",
             technologies: ["React", "API Integration", "Chart.js"],
-            links: ["GitHub", "Live Demo"]
+            linksName: ["GitHub", "Live Demo"],
+            links: ["https://github.com/jasjeev013/neighbouly-frontend","https://neighbourly-ebon.vercel.app/"]
         },
         {
             videoUrl: "/videos/weather-demo.mp4",
@@ -35,7 +38,8 @@ const Project = () => {
             title: "Bharat Ranch",
             description: "Real-time weather information with forecasts.",
             technologies: ["React", "API Integration", "Chart.js"],
-            links: ["GitHub", "Live Demo"]
+            linksName: ["GitHub", "Live Demo"],
+            links: ["https://github.com/jasjeev013/hustle-hub","https://neighbourly-ebon.vercel.app/"]
         },
         {
             videoUrl: "/videos/weather-demo.mp4",
@@ -43,7 +47,8 @@ const Project = () => {
             title: "Memory Hub",
             description: "Real-time weather information with forecasts.",
             technologies: ["React", "API Integration", "Chart.js"],
-            links: ["GitHub", "Live Demo"]
+            linksName: ["GitHub", "Live Demo"],
+            links: ["https://github.com/jasjeev013/hustle-hub","https://neighbourly-ebon.vercel.app/"]
         },
         {
             videoUrl: "/videos/weather-demo.mp4",
@@ -51,7 +56,8 @@ const Project = () => {
             title: "OneLife: THe God's Own",
             description: "Real-time weather information with forecasts.",
             technologies: ["React", "API Integration", "Chart.js"],
-            links: ["GitHub", "Live Demo"]
+            linksName: ["GitHub", "Live Demo"],
+            links: ["https://github.com/jasjeev013/hustle-hub","https://neighbourly-ebon.vercel.app/"]
         },
         // Add more projects as needed
     ];
@@ -65,6 +71,7 @@ const Project = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 p-2 lg:grid-cols-2 gap-7">
                         {projects.map((project, index) => (
+                          
                             <ProjectCard
                                 key={index}
                                 videoUrl={project.videoUrl}
@@ -72,6 +79,7 @@ const Project = () => {
                                 title={project.title}
                                 description={project.description}
                                 technologies={project.technologies}
+                                linksName={project.linksName}
                                 links={project.links}
                             />
                         ))}

@@ -26,31 +26,31 @@ const Navbar = () => {
               className="group text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-300 transition-all duration-300"
             >
               {/* text-black dark:text-[#CFCFCF] group-hover:mx-2 transition-all duration-300 */}
-              <FontAwesomeIcon icon={faHouse} size='xl' className="text-black dark:text-white/90 group-hover:mx-2 transition-all duration-300" />
+              <FontAwesomeIcon icon={faHouse} size='lg' className="text-black dark:text-white/90 group-hover:mx-2 transition-all duration-300" />
             </Link>
             <Link
               href="#workExperience"
               className="group text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-300 transition-all duration-300"
             >
-              <FontAwesomeIcon icon={faSuitcase} size='xl' className="text-black dark:text-white/90 group-hover:mx-2 transition-all duration-300" />
+              <FontAwesomeIcon icon={faSuitcase} size='lg' className="text-black dark:text-white/90 group-hover:mx-2 transition-all duration-300" />
             </Link>
             <Link
               href="#projects"
               className="group text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-300 transition-all duration-300"
             >
-              <FontAwesomeIcon icon={faFolder} size='xl' className="text-black dark:text-white/90 group-hover:mx-2 transition-all duration-300" />
+              <FontAwesomeIcon icon={faFolder} size='lg' className="text-black dark:text-white/90 group-hover:mx-2 transition-all duration-300" />
             </Link>
             <Link
               href="#hackathon"
               className="group text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-300 transition-all duration-300"
             >
-              <FontAwesomeIcon icon={faPuzzlePiece} size='xl' className="text-black dark:text-white/90 group-hover:mx-2 transition-all duration-300" />
+              <FontAwesomeIcon icon={faPuzzlePiece} size='lg' className="text-black dark:text-white/90 group-hover:mx-2 transition-all duration-300" />
             </Link>
             <Link
               href="#contactMe"
               className="group text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-300 transition-all duration-300"
             >
-              <FontAwesomeIcon icon={faComment} size='xl' className="text-black dark:text-white/90 group-hover:mx-2 transition-all duration-300" />
+              <FontAwesomeIcon icon={faComment} size='lg' className="text-black dark:text-white/90 group-hover:mx-2 transition-all duration-300" />
             </Link>
           </div>
         </div>
