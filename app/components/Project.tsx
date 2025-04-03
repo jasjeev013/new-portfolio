@@ -10,36 +10,27 @@ const Project = () => {
             posterUrl: "/thumbnails/ecommerce-thumb.jpg",
             title: "Hustle Hub: The Authentic Scheduler",
             description: "A Task Management System with secure authentication, task tracking, prioritization, categorization, and notifications. It helps users stay organized, prioritize tasks, and receive timely updates, ensuring smooth and efficient productivity.",
-            technologies: ["Angular","NgRx","Spring Boot","Spring Data JPA","JWT","PostgreSQL","Git","Github","AWS EC2"],
+            technologies: ["Angular","NgRx","Spring Boot","Spring Data JPA","JWT","PostgreSQL","AWS EC2"],
             linksName: ["GitHub"],
             links: ["https://github.com/jasjeev013/hustle-hub"]
         },
         {
-            videoUrl: "/videos/taskapp-demo.mp4",
+            videoUrl: "/projectVideos/neighbourly.mp4",
             posterUrl: "/thumbnails/taskapp-thumb.jpg",
             title: "Neighbourly: Let's Connect Communities",
             description: "Neighbourly connects people by allowing them to create, publish, and participate in events like hackathons, contests, and social services. Users can register, volunteer, and clarify doubts, promoting community engagement.",
-            technologies: ["React","Recoil","Tailwind CSS","Node.js","Express.js","MongoDB","Git","Github"],
+            technologies: ["React","Recoil",,"Axios","Tailwind CSS","Node.js","Express.js","MongoDB"],
             linksName: ["GitHub (Frontend)","GitHub (Backend)", "Live Demo"],
             links: ["https://github.com/jasjeev013/neighbouly-frontend","https://github.com/jasjeev013/neighbourly-backend","https://neighbourly-ebon.vercel.app/"]
         },
         {
             videoUrl: "/videos/weather-demo.mp4",
             posterUrl: "/thumbnails/weather-thumb.jpg",
-            title: "Phishing Detection System",
+            title: "BharatRanch: The Ultimate Ranch",
             description: "Real-time weather information with forecasts.",
-            technologies: ["React", "API Integration", "Chart.js"],
-            linksName: ["GitHub", "Live Demo"],
-            links: ["https://github.com/jasjeev013/neighbouly-frontend","https://neighbourly-ebon.vercel.app/"]
-        },
-        {
-            videoUrl: "/videos/weather-demo.mp4",
-            posterUrl: "/thumbnails/weather-thumb.jpg",
-            title: "Bharat Ranch",
-            description: "Real-time weather information with forecasts.",
-            technologies: ["React", "API Integration", "Chart.js"],
-            linksName: ["GitHub", "Live Demo"],
-            links: ["https://github.com/jasjeev013/hustle-hub","https://neighbourly-ebon.vercel.app/"]
+            technologies: ["React","Recoil","Axios","Material UI", "Node.js","Express.js","MongoDB","Bootstrap","Cloudinary","Multer"],
+            linksName: ["GitHub"],
+            links: ["https://github.com/jasjeev013/bharat-ranch"]
         },
         {
             videoUrl: "/videos/weather-demo.mp4",
@@ -59,6 +50,15 @@ const Project = () => {
             linksName: ["GitHub", "Live Demo"],
             links: ["https://github.com/jasjeev013/hustle-hub","https://neighbourly-ebon.vercel.app/"]
         },
+        {
+            videoUrl: "/videos/weather-demo.mp4",
+            posterUrl: "/thumbnails/weather-thumb.jpg",
+            title: "Phishing Detection System",
+            description: "Real-time weather information with forecasts.",
+            technologies: ["React", "API Integration", "Chart.js"],
+            linksName: ["GitHub"],
+            links: ["https://github.com/jasjeev013/Network-Security"]
+        }
         // Add more projects as needed
     ];
     return (
