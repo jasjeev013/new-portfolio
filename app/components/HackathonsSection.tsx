@@ -17,7 +17,7 @@ const HackathonsSection = () => {
                         <div className="shrink-0">
                             <div className="">
                                 {/* Replace with your logo */}
-                                <img src="profile.jpeg" alt="" className='w-16 h-16 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center' />
+                                <img src="./hackathons/smartIndia.png" alt="" className='w-16 h-16 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center' />
                             </div>
                         </div>
 
@@ -41,7 +41,7 @@ const HackathonsSection = () => {
                         <div className="shrink-0">
                             <div className="">
                                 {/* Replace with your logo */}
-                                <img src="profile.jpeg" alt="" className='w-16 h-16 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center' />
+                                <img src="./hackathons/buildwithDelhi.jpeg" alt="" className='w-16 h-16 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center' />
                             </div>
                         </div>
 
@@ -65,7 +65,7 @@ const HackathonsSection = () => {
                         <div className="shrink-0">
                             <div className="">
                                 {/* Replace with your logo */}
-                                <img src="profile.jpeg" alt="" className='w-16 h-16 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center' />
+                                <img src="./hackathons/cloud.png" alt="" className='w-16 h-16 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center' />
                             </div>
                         </div>
 
@@ -89,7 +89,7 @@ const HackathonsSection = () => {
                         <div className="shrink-0">
                             <div className="">
                                 {/* Replace with your logo */}
-                                <img src="profile.jpeg" alt="" className='w-16 h-16 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center' />
+                                <img src="./hackathons/IBMseal.png" alt="" className='w-16 h-16 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center' />
                             </div>
                         </div>
 
@@ -113,7 +113,7 @@ const HackathonsSection = () => {
                         <div className="shrink-0">
                             <div className="">
                                 {/* Replace with your logo */}
-                                <img src="profile.jpeg" alt="" className='w-16 h-16 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center' />
+                                <img src="./hackathons/cloud.png" alt="" className='w-16 h-16 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center' />
                             </div>
                         </div>
 
@@ -137,7 +137,7 @@ const HackathonsSection = () => {
                         <div className="shrink-0">
                             <div className="">
                                 {/* Replace with your logo */}
-                                <img src="profile.jpeg" alt="" className='w-16 h-16 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center' />
+                                <img src="./hackathons/gssoc.jpeg" alt="" className='w-16 h-16 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center' />
                             </div>
                         </div>
 

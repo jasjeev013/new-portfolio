@@ -24,11 +24,11 @@ const Project = () => {
             links: ["https://github.com/jasjeev013/neighbouly-frontend","https://github.com/jasjeev013/neighbourly-backend","https://neighbourly-ebon.vercel.app/"]
         },
         {
-            videoUrl: "/videos/weather-demo.mp4",
+            videoUrl: "/projectVideos/bharatRanch.mp4",
             posterUrl: "/thumbnails/weather-thumb.jpg",
             title: "BharatRanch: The Ultimate Ranch",
-            description: "Real-time weather information with forecasts.",
-            technologies: ["React","Recoil","Axios","Material UI", "Node.js","Express.js","MongoDB","Bootstrap","Cloudinary","Multer"],
+            description: "It connects farmers and buyers for bulk transactions with minimal margins. It enables direct sales between farmers and dealers, while a chat feature facilitates seamless communication for buying, selling, and negotiating.",
+            technologies: ["React","Recoil","Axios","Material UI", "Node.js","Express.js","MongoDB","Bootstrap","Cloudinary"],
             linksName: ["GitHub"],
             links: ["https://github.com/jasjeev013/bharat-ranch"]
         },
