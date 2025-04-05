@@ -33,13 +33,13 @@ const Project = () => {
             links: ["https://github.com/jasjeev013/bharat-ranch"]
         },
         {
-            videoUrl: "/videos/weather-demo.mp4",
+            videoUrl: "/projectVideos/memoryHub.mp4",
             posterUrl: "/thumbnails/weather-thumb.jpg",
             title: "Memory Hub",
-            description: "Real-time weather information with forecasts.",
-            technologies: ["React", "API Integration", "Chart.js"],
-            linksName: ["GitHub", "Live Demo"],
-            links: ["https://github.com/jasjeev013/hustle-hub","https://neighbourly-ebon.vercel.app/"]
+            description: "It is a web platform that lets users save important links, organize them with tags, and easily search by title, category, or tags. It offers a user-friendly interface for efficient link management.",
+            technologies: ["React", "Redux", "Bootstrap","Nodejs","Express.js","MongoDB","Vercel"],
+            linksName: ["GitHub", "Live Demo","Backend API"],
+            links: ["https://github.com/jasjeev013/memoryhub","https://memoryhub.vercel.app/","https://memoryhub-backend.vercel.app/"]
         },
         {
             videoUrl: "/videos/weather-demo.mp4",
