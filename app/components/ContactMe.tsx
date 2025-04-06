@@ -1,7 +1,7 @@
 'use client'; // Mark as Client Component
 import React from 'react'
 
-import { useState, FormEvent } from 'react';
+import { useState } from 'react';
 type FormData = {
   firstName: string;
   lastName: string;
@@ -16,8 +16,8 @@ const ContactMe = () => {
     message: ''
   });
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<{ success?: boolean; message?: string }>({});
+  const [isSubmitting] = useState(false);
+  const [submitStatus] = useState<{ success?: boolean; message?: string }>({});
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -27,7 +27,7 @@ const ContactMe = () => {
     }));
   };
 
-  const handleSubmit = async (e: FormEvent) => {
+  /*const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus({});
@@ -53,7 +53,7 @@ const ContactMe = () => {
     } finally {
       setIsSubmitting(false);
     }
-  };
+  };*/
   return (
     <>
 
@@ -68,7 +68,7 @@ const ContactMe = () => {
           </div>
         )}
 
-        <form onSubmit={handleSubmit} className='mx-40 mt-10'>
+        <form  className='mx-40 mt-10'> {/* onSubmit={handleSubmit} */}
           {/* Name Row */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
             <div>

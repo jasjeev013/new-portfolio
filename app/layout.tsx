@@ -5,6 +5,7 @@ import { config } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false; 
 
 import "./globals.css";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,11 +30,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="shortcut icon" href="/logo_jsk.png" />
-        <script
+        <Script
           src="https://kit.fontawesome.com/9f0ae78aa4.js"
           crossOrigin="anonymous"
-        ></script>
+        ></Script>
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased dark`}>
         {children}
