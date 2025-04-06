@@ -2,6 +2,7 @@ import { Badge } from '@/components/ui/badge'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import React from 'react'
+import Image from 'next/image'
 
 const HackathonsSection = () => {
     return (
@@ -17,7 +18,7 @@ const HackathonsSection = () => {
                         <div className="shrink-0">
                             <div className="">
                                 {/* Replace with your logo */}
-                                <img src="./hackathons/smartIndia.png" alt="" className='w-16 h-16 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center' />
+                                <Image height={100} width={100} src="/hackathons/smartIndia.png" alt="" className='w-16 h-16 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center' />
                             </div>
                         </div>
 
@@ -41,7 +42,7 @@ const HackathonsSection = () => {
                         <div className="shrink-0">
                             <div className="">
                                 {/* Replace with your logo */}
-                                <img src="./hackathons/buildwithDelhi.jpeg" alt="" className='w-16 h-16 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center' />
+                                <Image height={100} width={100} src="/hackathons/buildwithDelhi.jpeg" alt="" className='w-16 h-16 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center' />
                             </div>
                         </div>
 
@@ -65,7 +66,7 @@ const HackathonsSection = () => {
                         <div className="shrink-0">
                             <div className="">
                                 {/* Replace with your logo */}
-                                <img src="./hackathons/cloud.png" alt="" className='w-16 h-16 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center' />
+                                <Image height={100} width={100} src="/hackathons/cloud.png" alt="" className='w-16 h-16 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center' />
                             </div>
                         </div>
 
@@ -89,7 +90,7 @@ const HackathonsSection = () => {
                         <div className="shrink-0">
                             <div className="">
                                 {/* Replace with your logo */}
-                                <img src="./hackathons/IBMseal.png" alt="" className='w-16 h-16 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center' />
+                                <Image height={100} width={100} src="/hackathons/IBMseal.png" alt="" className='w-16 h-16 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center' />
                             </div>
                         </div>
 
@@ -113,7 +114,7 @@ const HackathonsSection = () => {
                         <div className="shrink-0">
                             <div className="">
                                 {/* Replace with your logo */}
-                                <img src="./hackathons/cloud.png" alt="" className='w-16 h-16 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center' />
+                                <Image height={100} width={100} src="/hackathons/cloud.png" alt="" className='w-16 h-16 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center' />
                             </div>
                         </div>
 
@@ -137,7 +138,7 @@ const HackathonsSection = () => {
                         <div className="shrink-0">
                             <div className="">
                                 {/* Replace with your logo */}
-                                <img src="./hackathons/gssoc.jpeg" alt="" className='w-16 h-16 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center' />
+                                <Image height={100} width={100} src="/hackathons/gssoc.jpeg" alt="" className='w-16 h-16 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center' />
                             </div>
                         </div>
 

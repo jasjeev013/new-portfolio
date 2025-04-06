@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 
 const WorkExperienceSection = () => {
@@ -14,7 +15,7 @@ const WorkExperienceSection = () => {
                         <div className="shrink-0">
                             <div className="w-16 h-16 rounded-full bg-white dark:bg-whiteflex items-center justify-center">
       
-                                <img src="/workExperience/sopra_steria.png" alt="Logo" className='  rounded-full' />
+                                <Image height={100} width={100} src="/workExperience/sopra_steria.png" alt="Logo" className='  rounded-full' />
                             </div>
                         </div>
 
@@ -35,7 +36,7 @@ const WorkExperienceSection = () => {
                         <div className="shrink-0">
                             <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center">
                 
-                                <img src="/workExperience/ibm.jpg" alt="Logo" className='  rounded-full' />
+                                <Image height={100} width={100} src="/workExperience/ibm.jpg" alt="Logo" className='  rounded-full' />
                             </div>
                         </div>
 

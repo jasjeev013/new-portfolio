@@ -19,7 +19,7 @@ const Project = () => {
             posterUrl: "/thumbnails/taskapp-thumb.jpg",
             title: "Neighbourly: Let's Connect Communities",
             description: "Neighbourly connects people by allowing them to create, publish, and participate in events like hackathons, contests, and social services. Users can register, volunteer, and clarify doubts, promoting community engagement.",
-            technologies: ["React","Recoil",,"Axios","Tailwind CSS","Node.js","Express.js","MongoDB"],
+            technologies: ["React","Recoil","Axios","Tailwind CSS","Node.js","Express.js","MongoDB"],
             linksName: ["GitHub (Frontend)","GitHub (Backend)", "Live Demo"],
             links: ["https://github.com/jasjeev013/neighbouly-frontend","https://github.com/jasjeev013/neighbourly-backend","https://neighbourly-ebon.vercel.app/"]
         },
@@ -42,22 +42,13 @@ const Project = () => {
             links: ["https://github.com/jasjeev013/memoryhub","https://memoryhub.vercel.app/","https://memoryhub-backend.vercel.app/"]
         },
         {
-            videoUrl: "/videos/weather-demo.mp4",
+            videoUrl: "/projectVideos/onelife.mp4",
             posterUrl: "/thumbnails/weather-thumb.jpg",
-            title: "OneLife: THe God's Own",
-            description: "Real-time weather information with forecasts.",
-            technologies: ["React", "API Integration", "Chart.js"],
-            linksName: ["GitHub", "Live Demo"],
-            links: ["https://github.com/jasjeev013/hustle-hub","https://neighbourly-ebon.vercel.app/"]
-        },
-        {
-            videoUrl: "/videos/weather-demo.mp4",
-            posterUrl: "/thumbnails/weather-thumb.jpg",
-            title: "Phishing Detection System",
-            description: "Real-time weather information with forecasts.",
-            technologies: ["React", "API Integration", "Chart.js"],
+            title: "OneLife: The God's Own",
+            description: "It is a backend API that stores data on hospitals, including bed availability, doctor vacancies, and specializations. It helps users easily find hospitals by area or specialization, especially in emergencies, and collects important data for better healthcare management.",
+            technologies: ["Springboot","Spring","Java","MySQL","Maven","Swagger ui"],
             linksName: ["GitHub"],
-            links: ["https://github.com/jasjeev013/Network-Security"]
+            links: ["https://github.com/jasjeev013/OneLife"]
         }
         // Add more projects as needed
     ];
@@ -73,7 +64,6 @@ const Project = () => {
                         {projects.map((project, index) => (
                           
                             <ProjectCard
-                                key={index}
                                 videoUrl={project.videoUrl}
                                 posterUrl={project.posterUrl}
                                 title={project.title}

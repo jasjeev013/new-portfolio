@@ -3,7 +3,6 @@ import { Badge } from "@/components/ui/badge";
 import { useRef } from "react";
 
 interface ProjectCardProps {
-  key: number; // Unique key for each project card
   videoUrl: string;
   title: string;
   description: string;
@@ -13,7 +12,7 @@ interface ProjectCardProps {
   linksName: string[]; // Array of link names
 }
 
-const ProjectCard = ({ key, videoUrl, title, description, technologies, links, linksName, posterUrl }: ProjectCardProps) => {
+const ProjectCard = ({  videoUrl, title, description, technologies, links, linksName, posterUrl }: ProjectCardProps) => {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const handleMouseEnter = () => {

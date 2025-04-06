@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 
 const EducationSection = () => {
@@ -13,7 +14,7 @@ const EducationSection = () => {
                         <div className="shrink-0">
                             <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center">
 
-                                <img src="/education/mait.jpeg" alt="Mait" className='w-full h-full rounded-full' />
+                                <Image height={100} width={100} src="/education/mait.jpeg" alt="Mait" className='w-full h-full rounded-full' />
                             </div>
                         </div>
 
@@ -33,7 +34,7 @@ const EducationSection = () => {
                         <div className="shrink-0 ">
                             <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center">
 
-                                <img src="/education/newEra.jfif" alt="Mait" className='w-full h-full rounded-full' />
+                                <Image height={100} width={100} src="/education/newEra.jfif" alt="Mait" className='w-full h-full rounded-full' />
                             </div>
                         </div>
 

@@ -4,6 +4,7 @@ import { faGithub, faGoogle, faLinkedin, faXTwitter } from '@fortawesome/free-br
 import { faEnvelope, faLink, faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react'
+import Image from 'next/image'
 
 
 const IntroductionSection = () => {
@@ -15,11 +16,11 @@ const IntroductionSection = () => {
                 {/* First Div: Heading and Paragraph */}
                 <div className="flex-2 sm:flex-2 space-y-4 animate-slide-in-up ">
                     <h1 className=" text-2xl sm:text-4xl flex flex-row  font-bold text-gray-900 dark:text-white">
-                        Hi, I'm Jasjeev Singh K. <span className="waving-hand sm:flex hidden">👋🏻</span>
+                        {`Hi, I'm Jasjeev Singh K.`} <span className="waving-hand sm:flex hidden">👋🏻</span>
 
                     </h1>
                     <p className="text-sm sm:text-lg text-gray-600 dark:text-gray-300">
-                        Spring Boot and Full Stack Web Developer with a passion for building dynamic, scalable applications. Currently, I'm also exploring the exciting field of AI/ML to expand my skill set.
+                        {`Spring Boot and Full Stack Web Developer with a passion for building dynamic, scalable applications. Currently, I'm also exploring the exciting field of AI/ML to expand my skill set.`}
                     </p>
                     <div className="align-center justify-start ">
                         <p className='text-sm sm:text-lg'>
@@ -47,10 +48,12 @@ const IntroductionSection = () => {
                     <GlareCard className="flex flex-col ">
                         <div className="relative w-33 sm:w-50 h-33 sm:h-50 rounded-md sm:rounded-2xl overflow-hidden group">
                             {/* Photo */}
-                            <img
+                            <Image
                                 src="/profile.jpeg"
                                 alt="Jasjeev"
                                 className="w-full h-full object-cover"
+                                width={133}
+                                height={133}
                             />
                         </div>
                     </GlareCard>
