@@ -10,7 +10,7 @@ const Project = () => {
             posterUrl: "/thumbnails/ecommerce-thumb.jpg",
             title: "Hustle Hub: The Authentic Scheduler",
             description: "A Task Management System with secure authentication, task tracking, prioritization, categorization, and notifications. It helps users stay organized, prioritize tasks, and receive timely updates, ensuring smooth and efficient productivity.",
-            technologies: ["Angular","NgRx","Spring Boot","Spring Data JPA","JWT","PostgreSQL","AWS EC2"],
+            technologies: ["Angular", "NgRx", "Spring Boot", "Spring Data JPA", "JWT", "PostgreSQL", "AWS EC2"],
             linksName: ["GitHub"],
             links: ["https://github.com/jasjeev013/hustle-hub"]
         },
@@ -19,16 +19,16 @@ const Project = () => {
             posterUrl: "/thumbnails/taskapp-thumb.jpg",
             title: "Neighbourly: Let's Connect Communities",
             description: "Neighbourly connects people by allowing them to create, publish, and participate in events like hackathons, contests, and social services. Users can register, volunteer, and clarify doubts, promoting community engagement.",
-            technologies: ["React","Recoil","Axios","Tailwind CSS","Node.js","Express.js","MongoDB"],
-            linksName: ["GitHub (Frontend)","GitHub (Backend)", "Live Demo"],
-            links: ["https://github.com/jasjeev013/neighbouly-frontend","https://github.com/jasjeev013/neighbourly-backend","https://neighbourly-ebon.vercel.app/"]
+            technologies: ["React", "Recoil", "Axios", "Tailwind CSS", "Node.js", "Express.js", "MongoDB"],
+            linksName: ["GitHub (Frontend)", "GitHub (Backend)", "Live Demo"],
+            links: ["https://github.com/jasjeev013/neighbouly-frontend", "https://github.com/jasjeev013/neighbourly-backend", "https://neighbourly-ebon.vercel.app/"]
         },
         {
             videoUrl: "/projectVideos/bharatRanch.mp4",
             posterUrl: "/thumbnails/weather-thumb.jpg",
             title: "BharatRanch: The Ultimate Ranch",
             description: "It connects farmers and buyers for bulk transactions with minimal margins. It enables direct sales between farmers and dealers, while a chat feature facilitates seamless communication for buying, selling, and negotiating.",
-            technologies: ["React","Recoil","Axios","Material UI", "Node.js","Express.js","MongoDB","Bootstrap","Cloudinary"],
+            technologies: ["React", "Recoil", "Axios", "Material UI", "Node.js", "Express.js", "MongoDB", "Bootstrap", "Cloudinary"],
             linksName: ["GitHub"],
             links: ["https://github.com/jasjeev013/bharat-ranch"]
         },
@@ -37,16 +37,16 @@ const Project = () => {
             posterUrl: "/thumbnails/weather-thumb.jpg",
             title: "Memory Hub",
             description: "It is a web platform that lets users save important links, organize them with tags, and easily search by title, category, or tags. It offers a user-friendly interface for efficient link management.",
-            technologies: ["React", "Redux", "Bootstrap","Nodejs","Express.js","MongoDB","Vercel"],
-            linksName: ["GitHub", "Live Demo","Backend API"],
-            links: ["https://github.com/jasjeev013/memoryhub","https://memoryhub.vercel.app/","https://memoryhub-backend.vercel.app/"]
+            technologies: ["React", "Redux", "Bootstrap", "Nodejs", "Express.js", "MongoDB", "Vercel"],
+            linksName: ["GitHub", "Live Demo", "Backend API"],
+            links: ["https://github.com/jasjeev013/memoryhub", "https://memoryhub.vercel.app/", "https://memoryhub-backend.vercel.app/"]
         },
         {
             videoUrl: "/projectVideos/onelife.mp4",
             posterUrl: "/thumbnails/weather-thumb.jpg",
             title: "OneLife: The God's Own",
             description: "It is a backend API that stores data on hospitals, including bed availability, doctor vacancies, and specializations. It helps users easily find hospitals by area or specialization, especially in emergencies, and collects important data for better healthcare management.",
-            technologies: ["Springboot","Spring","Java","MySQL","Maven","Swagger ui"],
+            technologies: ["Springboot", "Spring", "Java", "MySQL", "Maven", "Swagger ui"],
             linksName: ["GitHub"],
             links: ["https://github.com/jasjeev013/OneLife"]
         }
@@ -62,8 +62,9 @@ const Project = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 p-2 lg:grid-cols-2 gap-7">
                         {projects.map((project, index) => (
-                          
+
                             <ProjectCard
+                                key={index}
                                 videoUrl={project.videoUrl}
                                 posterUrl={project.posterUrl}
                                 title={project.title}
