@@ -57,7 +57,7 @@ const ContactMe = () => {
   return (
     <>
 
-      <div id='contactMe' className='bg-red lg:px-25 md:px-0 sm:px-0 ml-5 md:ml-16 mt-15 animate-blur-out-3 '>
+      <div id='contactMe' className=' lg:px-25 px-0 ml-5 md:ml-16 mt-15 animate-blur-out-3 '>
         <h1 className="text-3xl font-bold text-gray-900 dark:text-white animate-slide-in-up-3">
           Contact Me
         </h1>
@@ -68,7 +68,7 @@ const ContactMe = () => {
           </div>
         )}
 
-        <form  className='mx-40 mt-10'> {/* onSubmit={handleSubmit} */}
+        <form className='mx-10 sm:mx-40 mt-10 '> {/* onSubmit={handleSubmit} */}
           {/* Name Row */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
             <div>

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { config } from "@fortawesome/fontawesome-svg-core";
-config.autoAddCss = false; 
+config.autoAddCss = false;
 
 import "./globals.css";
 import Script from "next/script";

@@ -20,7 +20,7 @@ const Project = () => {
             title: "Neighbourly: Let's Connect Communities",
             description: "Neighbourly connects people by allowing them to create, publish, and participate in events like hackathons, contests, and social services. Users can register, volunteer, and clarify doubts, promoting community engagement.",
             technologies: ["React", "Recoil", "Axios", "Tailwind CSS", "Node.js", "Express.js", "MongoDB"],
-            linksName: ["GitHub (Frontend)", "GitHub (Backend)", "Live Demo"],
+            linksName: ["GitHub (Frontend)", "GitHub (Backend)", "Live (frontend)"],
             links: ["https://github.com/jasjeev013/neighbouly-frontend", "https://github.com/jasjeev013/neighbourly-backend", "https://neighbourly-ebon.vercel.app/"]
         },
         {
@@ -38,7 +38,7 @@ const Project = () => {
             title: "Memory Hub",
             description: "It is a web platform that lets users save important links, organize them with tags, and easily search by title, category, or tags. It offers a user-friendly interface for efficient link management.",
             technologies: ["React", "Redux", "Bootstrap", "Nodejs", "Express.js", "MongoDB", "Vercel"],
-            linksName: ["GitHub", "Live Demo", "Backend API"],
+            linksName: ["GitHub", "Live (frontend)", "Live (backend)"],
             links: ["https://github.com/jasjeev013/memoryhub", "https://memoryhub.vercel.app/", "https://memoryhub-backend.vercel.app/"]
         },
         {
@@ -55,10 +55,10 @@ const Project = () => {
     return (
         <>
             <div id='project' className='bg-red lg:px-25 md:px-0 sm:px-0 ml-5 md:ml-16 mt-15 animate-blur-out-3 '>
-                <h1 className="text-3xl font-bold text-gray-900 dark:text-white animate-slide-in-up-3">
+                <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white animate-slide-in-up-3">
                     Projects
                 </h1>
-                <div className="container mx-auto px-14 py-12">
+                <div className="container mx-auto px-5 sm:px-14 py-12">
 
                     <div className="grid grid-cols-1 md:grid-cols-2 p-2 lg:grid-cols-2 gap-7">
                         {projects.map((project, index) => (
