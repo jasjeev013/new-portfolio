@@ -37,7 +37,7 @@ const ProjectCard = ({  videoUrl, title, description, technologies, links, links
           src={videoUrl}
           poster={posterUrl}
           autoPlay
-
+          preload="auto"
           muted
           loop
           playsInline
