@@ -39,3 +39,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 <!-- bun add tailwindcss postcss autoprefixer -->
 <!-- dark light mode button -->
 <!-- Fade in animation -->
+<!-- Navbar smooth clicking going -->
+<!-- footer anchor tag details -->
+<!-- CHeck video not loading -->
+<!-- CHeck video not loading -->

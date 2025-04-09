@@ -11,7 +11,7 @@ const IntroductionSection = () => {
 
     return (
         <>
-            <div className='flex flex-col items-start justify-start w-full h-full sm:mt-10 mt-3 '>
+            <div className='flex flex-col items-start justify-start w-full h-full sm:mt-6 mt-3 '>
 
                 <div className="flex flex-row md:flow-col sm:flex-row animate-blur-out item-start sm:items-center  justify-between gap-4 lg:px-25 ml-5 md:ml-16 mt-25 md:px-0 sm:px-0 ">
 
