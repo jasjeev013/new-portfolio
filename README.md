@@ -43,3 +43,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 <!-- footer anchor tag details -->
 <!-- CHeck video not loading -->
 <!-- CHeck video not loading -->
+<!-- bun run lint
+bun run build -->

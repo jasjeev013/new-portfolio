@@ -2,7 +2,7 @@
 import { Badge } from '@/components/ui/badge'
 import React, { useState } from 'react'
 import ProjectCard from './ProjectCard';
-import { redirect } from 'next/navigation';
+
 
 const Project = () => {
 
