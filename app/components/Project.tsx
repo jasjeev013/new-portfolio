@@ -1,12 +1,13 @@
 'use client';
 import { Badge } from '@/components/ui/badge'
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import ProjectCard from './ProjectCard';
 
 
 const Project = () => {
 
     const [showAll, setShowAll] = useState(false);
+    const projectSectionRef = useRef<HTMLDivElement>(null);
 
     const projects = [
 
@@ -58,49 +59,58 @@ const Project = () => {
         }
         // Add more projects as needed
     ];
-    const visibleProjects = showAll ? projects : projects.slice(0, 3);
-return (
-    <>
-        <div id='project' className='bg-red lg:px-25 md:px-0 sm:px-0 ml-5 md:ml-16 mt-15 animate-blur-out-3 '>
-            <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white animate-slide-in-up-3">
-                Projects
-            </h1>
-            <div className="container mx-auto px-5 sm:px-14 py-12">
+    const visibleProjects = showAll ? projects : projects.slice(0, 4);
 
-                <div className="grid grid-cols-1 md:grid-cols-2 p-2 lg:grid-cols-2 gap-7">
-                    {visibleProjects.map((project, index) => (
+    const toggleShowAll = () => {
+        const willShowAll = !showAll;
+        setShowAll(willShowAll);
 
-                        <ProjectCard
-                            key={index}
-                            videoUrl={project.videoUrl}
-                            posterUrl={project.posterUrl}
-                            title={project.title}
-                            description={project.description}
-                            technologies={project.technologies}
-                            linksName={project.linksName}
-                            links={project.links}
+        // Only scroll to top when showing less
+        if (!willShowAll && projectSectionRef.current) {
+            projectSectionRef.current.scrollIntoView({
+                behavior: 'smooth',
+                block: 'end'
+            });
+        }
+    };
+    return (
+        <>
+            <div id='projects' ref={projectSectionRef} className='bg-red lg:px-25 md:px-0 sm:px-0 ml-5 md:ml-16 mt-15 animate-blur-out-3'>
+                <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white animate-slide-in-up-3">
+                    Projects
+                </h1>
+                <div className="container mx-auto px-5 sm:px-14 py-12">
+                    <div className="grid grid-cols-1 md:grid-cols-2 p-2 lg:grid-cols-2 gap-7">
+                        {visibleProjects.map((project, index) => (
+                            <ProjectCard
+                                key={index}
+                                videoUrl={project.videoUrl}
+                                posterUrl={project.posterUrl}
+                                title={project.title}
+                                description={project.description}
+                                technologies={project.technologies}
+                                linksName={project.linksName}
+                                links={project.links}
+                            />
+                        ))}
+                    </div>
 
-                        />
-                    ))}
-                </div>
-
-                <div className='flex mr-5 justify-end align-end'>
-                    <button
-                        onClick={() =>{ setShowAll(!showAll)
-                        
-                        }}
-                        className="text-sm font-medium text-blue-600 dark:text-blue-400 hover:underline mt-5"
-                    > <Badge className='text-sm mt-2 bg-blue-600 text-white'>
-
-                            {showAll ? 'Show Less' : 'See More'}
-
-                        </Badge>
-                    </button>
+                    {projects.length > 4 && (
+                        <div className='flex mr-5 justify-end align-end'>
+                            <button
+                                onClick={toggleShowAll}
+                                className="text-sm font-medium text-blue-600 dark:text-blue-400 hover:underline mt-5"
+                            >
+                                <Badge className='text-sm mt-2 bg-blue-600 text-white'>
+                                    {showAll ? 'Show Less' : 'See More'}
+                                </Badge>
+                            </button>
+                        </div>
+                    )}
                 </div>
             </div>
-        </div>
-    </>
-)
+        </>
+    )
 }
 
 export default Project

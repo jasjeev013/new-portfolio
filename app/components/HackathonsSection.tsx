@@ -2,11 +2,12 @@
 import { Badge } from '@/components/ui/badge'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import Image from 'next/image'
 
 const HackathonsSection = () => {
     const [showAll, setShowAll] = useState(false);
+    const hackathonSectionRef = useRef<HTMLDivElement>(null);
 
     const hackathons = [
         {
@@ -67,8 +68,22 @@ const HackathonsSection = () => {
 
     const visibleHackathons = showAll ? hackathons : hackathons.slice(0, 3);
 
+
+    const toggleShowAll = () => {
+        const willShowAll = !showAll;
+        setShowAll(willShowAll);
+
+        // Only scroll to top when showing less
+        if (!willShowAll && hackathonSectionRef.current) {
+            hackathonSectionRef.current.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+        }
+    };
+
     return (
-        <div id='hackathon' className='bg-red lg:px-25 md:px-0 sm:px-0 ml-5 md:ml-16 mt-15 animate-blur-out-3'>
+        <div id='hackathon' ref={hackathonSectionRef} className='bg-red lg:px-25 md:px-0 sm:px-0 ml-5 md:ml-16 mt-15 animate-blur-out-3'>
             <div className="flex justify-between items-center">
                 <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white animate-slide-in-up-3">
                     Hackathon & Contests
@@ -124,17 +139,18 @@ const HackathonsSection = () => {
                         </div>
                     </div>
                 ))}
-                <div className='flex mr-5 justify-end align-end'>
-                    <button
-                        onClick={() => setShowAll(!showAll)}
-                        className="text-sm font-medium text-blue-600 dark:text-blue-400 hover:underline mt-5"
-                    > <Badge className='text-sm mt-2 bg-blue-600 text-white'>
-                        
+                {hackathons.length > 3 && (
+                    <div className='flex mr-5 justify-end align-end'>
+                        <button
+                            onClick={toggleShowAll}
+                            className="text-sm font-medium text-blue-600 dark:text-blue-400 hover:underline mt-5"
+                        >
+                            <Badge className='text-sm mt-2 bg-blue-600 text-white'>
                                 {showAll ? 'Show Less' : 'See More'}
-                      
-                        </Badge>
-                    </button>
-                </div>
+                            </Badge>
+                        </button>
+                    </div>
+                )}
 
             </div>
         </div>
