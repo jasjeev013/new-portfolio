@@ -13,13 +13,13 @@ const SkillsSections = () => {
                     <div className="flex items-start animate-blur-out-3  sm:items-center flex-col sm:flex-row gap-4">
                         <span className="font-bold text-xl min-w-[80px]">Frontend:</span>
                         <div className="flex flex-wrap gap-2 sm:ml-3">
-                            <Badge>React</Badge>
-                            <Badge>HTML</Badge>
-                            <Badge>CSS</Badge>
-                            <Badge>Tailwind CSS</Badge>
                             <Badge>JavaScript</Badge>
+                            <Badge>React</Badge>
+                            <Badge>Angular</Badge>
+                            <Badge>Tailwind CSS</Badge>
                             <Badge>TypeScript</Badge>
                             <Badge>Next.js</Badge>
+
                         </div>
                     </div>
 
@@ -29,13 +29,9 @@ const SkillsSections = () => {
                         <div className="flex flex-wrap gap-2 sm:ml-4">
                             <Badge>Node.js</Badge>
                             <Badge>Express</Badge>
-                            <Badge>Python</Badge>
-                            <Badge>Django</Badge>
-                            <Badge>Flask</Badge>
-                      
-                            <Badge>Java</Badge>
+                            <Badge>Bun.js</Badge>
+                            <Badge>EJS</Badge>
                             <Badge>Spring Boot</Badge>
-                            <Badge>PHP</Badge>
                         </div>
                     </div>
 
@@ -49,22 +45,20 @@ const SkillsSections = () => {
                             <Badge>Redis</Badge>
                             <Badge>Firebase</Badge>
                             <Badge>AWS RDS</Badge>
-                     
+
                         </div>
                     </div>
                     {/* DevOps Row */}
                     <div className="flex items-start animate-blur-out-3 sm:items-center flex-col sm:flex-row gap-4">
                         <span className="font-bold text-xl min-w-[80px]">DevOps:</span>
                         <div className="flex flex-wrap gap-2 sm:ml-5">
+                            <Badge>Kafka</Badge>
+                            <Badge>Nginx</Badge>
                             <Badge>Docker</Badge>
                             <Badge>Kubernetes</Badge>
                             <Badge>AWS</Badge>
                             <Badge>Azure</Badge>
                             <Badge>GCP</Badge>
-                            <Badge>Terraform</Badge>
-                            <Badge>CI/CD</Badge>
-                            <Badge>GitHub Actions</Badge>
-                            <Badge>Jenkins</Badge>
                         </div>
                     </div>
 
@@ -73,14 +67,15 @@ const SkillsSections = () => {
                         <span className="font-bold text-xl min-w-[80px]">AI/ML:</span>
                         <div className="flex flex-wrap gap-2 sm:ml-5">
                             <Badge>Python</Badge>
+                            <Badge>Flask</Badge>
+                            <Badge>Streamlit</Badge>
                             <Badge>TensorFlow</Badge>
                             <Badge>PyTorch</Badge>
                             <Badge>Scikit-learn</Badge>
                             <Badge>Pandas</Badge>
                             <Badge>NumPy</Badge>
-                            <Badge>OpenCV</Badge>
                             <Badge>NLP</Badge>
-                            <Badge>Computer Vision</Badge>
+
                         </div>
                     </div>
                 </div>
