@@ -8,9 +8,9 @@ const SkillsSections = () => {
                 <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white animate-slide-in-up-3">
                     Skills
                 </h1>
-                <div className="space-y-3 px-5 mt-5 ">
+                <div className="space-y-3 px-5 animate-slide-in-up-3 mt-5 ">
                     {/* Frontend Row */}
-                    <div className="flex items-start sm:items-center flex-col sm:flex-row gap-4">
+                    <div className="flex items-start animate-blur-out-3  sm:items-center flex-col sm:flex-row gap-4">
                         <span className="font-bold text-xl min-w-[80px]">Frontend:</span>
                         <div className="flex flex-wrap gap-2 sm:ml-3">
                             <Badge>React</Badge>
@@ -24,7 +24,7 @@ const SkillsSections = () => {
                     </div>
 
                     {/* Backend Row */}
-                    <div className="flex items-start sm:items-center flex-col sm:flex-row gap-4">
+                    <div className="flex items-start animate-blur-out-3 sm:items-center flex-col sm:flex-row gap-4">
                         <span className="font-bold text-xl min-w-[80px] ">Backend:</span>
                         <div className="flex flex-wrap gap-2 sm:ml-4">
                             <Badge>Node.js</Badge>
@@ -40,7 +40,7 @@ const SkillsSections = () => {
                     </div>
 
                     {/* Database Row */}
-                    <div className="flex items-start sm:items-center flex-col sm:flex-row gap-4">
+                    <div className="flex items-start animate-blur-out-3 sm:items-center flex-col sm:flex-row gap-4">
                         <span className="font-bold text-xl min-w-[80px]">Database:</span>
                         <div className="flex flex-wrap gap-2 sm:ml-2">
                             <Badge>MySQL</Badge>
@@ -53,7 +53,7 @@ const SkillsSections = () => {
                         </div>
                     </div>
                     {/* DevOps Row */}
-                    <div className="flex items-start sm:items-center flex-col sm:flex-row gap-4">
+                    <div className="flex items-start animate-blur-out-3 sm:items-center flex-col sm:flex-row gap-4">
                         <span className="font-bold text-xl min-w-[80px]">DevOps:</span>
                         <div className="flex flex-wrap gap-2 sm:ml-5">
                             <Badge>Docker</Badge>
@@ -69,7 +69,7 @@ const SkillsSections = () => {
                     </div>
 
                     {/* AI/ML Row */}
-                    <div className="flex items-start sm:items-center lg:items-start flex-col sm:flex-row gap-4">
+                    <div className="flex items-start animate-blur-out-3 sm:items-center lg:items-start flex-col sm:flex-row gap-4">
                         <span className="font-bold text-xl min-w-[80px]">AI/ML:</span>
                         <div className="flex flex-wrap gap-2 sm:ml-5">
                             <Badge>Python</Badge>

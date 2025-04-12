@@ -46,7 +46,7 @@ const IntroductionSection = () => {
                     </div>
 
                     {/* Second Div: Photo with Red Shadow */}
-                    <div className=" hidden sm:flex  animate-slide-in-up flex items-start  sm:items-center justify-center">
+                    <div className=" hidden sm:flex   animate-slide-in-up flex items-start  sm:items-center justify-center">
                         <GlareCard className="flex sm:flex flex-col w-30 h-30 sm:w-50  sm:h-50">
                             <div className="relative  w-30 h-30 sm:w-50  sm:h-50  rounded-md sm:rounded-2xl overflow-hidden group">
                                 {/* Photo */}
@@ -61,7 +61,7 @@ const IntroductionSection = () => {
                         </GlareCard>
                     </div>
                     {/* Second Div: Photo with Red Shadow */}
-                    <div className=" flex-1/4 sm:hidden  animate-slide-in-up flex items-start  sm:items-center justify-center">
+                    <div className=" flex-1/4 sm:hidden   animate-slide-in-up flex items-start  sm:items-center justify-center">
                         <GlareCard className="flex flex-col ">
                             <div className="relative w-30 h-30 sm:w-50  sm:h-50  rounded-sm sm:rounded-2xl overflow-hidden group">
                                 {/* Photo */}
@@ -76,7 +76,7 @@ const IntroductionSection = () => {
                         </GlareCard>
                     </div>
                 </div>
-                <div className='flex sm:hidden align-center text-sm sm:text-lg justify-start px-1 mt-7 flex flex-row gap-7 ml-4 sm:gap-10'>
+                <div className='flex sm:hidden align-center animate-blur-out animate-slide-in-up text-sm sm:text-lg justify-start px-1 mt-7 flex flex-row gap-7 ml-4 sm:gap-10'>
                     <a href="https://github.com/jasjeev013" target="_blank"
                         rel="noopener noreferrer"> <FontAwesomeIcon icon={faGithub} size='lg' /></a>
                     <a href="https://www.linkedin.com/in/jasjeev-singh-k-773238247/" target="_blank"

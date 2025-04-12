@@ -6,6 +6,7 @@ config.autoAddCss = false;
 
 import "./globals.css";
 import Script from "next/script";
+import { ThemeProvider } from "./components/theme-provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,15 +29,24 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <Script
           src="https://kit.fontawesome.com/9f0ae78aa4.js"
           crossOrigin="anonymous"
         ></Script>
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased dark`}>
-        {children}
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased `}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          
+
+          {children}
+        </ThemeProvider>
       </body>
 
     </html>

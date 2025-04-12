@@ -12,10 +12,11 @@ import ContactMe from '../components/ContactMe'
 import FooterSection from '../components/FooterSection'
 
 
+
 const page = () => {
     return (
         <>
-            <div className="w-full min-h-screen flex items-center justify-center bg-[#F0E3E3] dark:bg-[#010304] ">
+            <div className=" w-full min-h-screen flex items-center justify-center bg-[#F0E3E3] dark:bg-[#010304] ">
                 <div className=" w-full xl:w-[calc(75rem)] lg:w-[calc(100%-2rem)] md:w-full sm:w-full  min-h-screen   sm:p-4 "> {/* lg:border-l-[1px] lg:border-r-[1px] lg:border-white/30 */}
                     <Navbar />
                     <IntroductionSection />
@@ -29,6 +30,9 @@ const page = () => {
                     <FooterSection />
                 </div>
             </div>
+
+
+
         </>
 
     )
