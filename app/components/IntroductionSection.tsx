@@ -76,19 +76,19 @@ const IntroductionSection = () => {
                         </GlareCard>
                     </div>
                 </div>
-                <div className='flex sm:hidden align-center animate-blur-out animate-slide-in-up text-sm sm:text-lg justify-start px-1 mt-7 flex flex-row gap-7 ml-4 sm:gap-10'>
+                <div className='flex sm:hidden align-center animate-blur-out animate-slide-in-up-2 text-sm sm:text-lg justify-start px-1 mt-7 flex flex-row gap-7 ml-4 sm:gap-10'>
                     <a href="https://github.com/jasjeev013" target="_blank"
-                        rel="noopener noreferrer"> <FontAwesomeIcon icon={faGithub} size='lg' /></a>
+                        rel="noopener noreferrer" className='animate-blur-out-2  '> <FontAwesomeIcon icon={faGithub} size='lg' /></a>
                     <a href="https://www.linkedin.com/in/jasjeev-singh-k-773238247/" target="_blank"
-                        rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedin} size='lg' /></a>
+                        rel="noopener noreferrer" className='animate-blur-out-2 '><FontAwesomeIcon icon={faLinkedin} size='lg' /></a>
                     <a href="https://x.com/jskkk_013" target="_blank"
-                        rel="noopener noreferrer"><FontAwesomeIcon icon={faXTwitter} size='lg' /></a>
+                        rel="noopener noreferrer" className='animate-blur-out-2 '><FontAwesomeIcon icon={faXTwitter} size='lg' /></a>
                     <a href="mailto:jasjeev99@gmail.com" target="_blank"
-                        rel="noopener noreferrer"><FontAwesomeIcon icon={faEnvelope} size='lg' /></a>
+                        rel="noopener noreferrer" className='animate-blur-out-2 '><FontAwesomeIcon icon={faEnvelope} size='lg' /></a>
                     <a href="https://linktr.ee/jskkk_013" target="_blank"
-                        rel="noopener noreferrer"><FontAwesomeIcon icon={faLink} size='lg' /></a>
+                        rel="noopener noreferrer" className='animate-blur-out-2 '><FontAwesomeIcon icon={faLink} size='lg' /></a>
                     <a href="https://www.cloudskillsboost.google/public_profiles/4b35e1aa-f724-4a09-be18-e15325912653" target="_blank"
-                        rel="noopener noreferrer"><FontAwesomeIcon icon={faGoogle} size='lg' /></a>
+                        rel="noopener noreferrer" className='animate-blur-out-2 '><FontAwesomeIcon icon={faGoogle} size='lg' /></a>
                 </div>
             </div>
         </>
