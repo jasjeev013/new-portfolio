@@ -1,6 +1,6 @@
 'use client';
 import { Badge } from "@/components/ui/badge";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 
 interface ProjectCardProps {
   videoUrl: string;
@@ -12,23 +12,21 @@ interface ProjectCardProps {
   linksName: string[]; // Array of link names
 }
 
-const ProjectCard = ({  videoUrl, title, description, technologies, links, linksName, posterUrl }: ProjectCardProps) => {
+const ProjectCard = ({ videoUrl, title, description, technologies, links, linksName, posterUrl }: ProjectCardProps) => {
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  const handleMouseEnter = () => {
-    videoRef.current?.play();
-  };
-
-  const handleMouseLeave = () => {
-    videoRef.current?.pause();
-    if (videoRef.current) videoRef.current.currentTime = 0;
-  };
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.play().catch(error => {
+        console.log("Auto-play prevented:", error);
+      });
+    }
+  }, []);
 
   return (
     <div
-      className="flex flex-col rounded-lg overflow-hidden border border-gray-200 dark:border-gray-700 shadow-md hover:shadow-lg transition-shadow duration-300"
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
+      className="flex flex-col rounded-lg overflow-hidden border border-zinc dark:border-gray-700 shadow-md hover:shadow-lg transition-shadow duration-300"
+
     >
       {/* Project Video */}
       <div className="h-48 overflow-hidden relative">
@@ -37,12 +35,11 @@ const ProjectCard = ({  videoUrl, title, description, technologies, links, links
           src={videoUrl}
           poster={posterUrl}
           autoPlay
-          preload="auto"
           muted
           loop
           playsInline
           className="w-full h-full object-cover"
-          controls={false} // We'll handle controls via hover
+          controls={false}
         />
 
       </div>
@@ -67,7 +64,12 @@ const ProjectCard = ({  videoUrl, title, description, technologies, links, links
         <div className="flex flex-wrap gap-2 mt-4">
           {linksName.map((tech, index) => (
 
-            <a target="_blank" key={index} href={links[index]}>
+            <a
+              key={index}
+              href={links[index]}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Badge key={index}> {tech} </Badge>
             </a>
           ))}

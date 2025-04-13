@@ -45,7 +45,7 @@ const Navbar = () => {
   if (!mounted) {
     // Return a placeholder with the same dimensions during SSR
     return (
-      <nav className="fixed top-5 left-1/2 transform -translate-x-1/2 z-50 w-[calc(65%)] sm:w-fit max-w-sm h-14">
+      <nav className="fixed top-5 left-1/2 transform -translate-x-1/2 z-50 w-[calc(100%)] h-14">
         {/* Empty placeholder to prevent layout shift */}
       </nav>
     );
@@ -53,7 +53,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-5 bg-white animate-slide-in-down animate-blur-out left-1/2 transform -translate-x-1/2 z-50 w-[calc(85%)] sm:w-w-[calc(35%)]  backdrop-blur-xl bg-white/20 dark:bg-[#201313]/70 border border-white/20 dark:border-black/10 rounded-4xl shadow-lg transition-all duration-300 ease-in-out ${isHovered ? 'max-w-md' : 'max-w-sm'
+      className={`fixed top-5 bg-white animate-slide-in-down animate-blur-out left-1/2 transform -translate-x-1/2 z-50   backdrop-blur-xl bg-white/20 dark:bg-[#201313]/70 border border-white/20 dark:border-black/10 rounded-4xl shadow-lg transition-all duration-300 ease-in-out ${isHovered ? 'w-[calc(73%)] sm:max-w-sm' : 'w-[calc(73%)] sm:max-w-sm'
         }`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
