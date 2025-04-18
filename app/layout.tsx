@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { config } from "@fortawesome/fontawesome-svg-core";
+import { Analytics } from '@vercel/analytics/next';
 config.autoAddCss = false;
 
 import "./globals.css";
@@ -61,6 +62,7 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Providers>
           {children}
+          <Analytics/>
         </Providers>
       </body>
     </html>
