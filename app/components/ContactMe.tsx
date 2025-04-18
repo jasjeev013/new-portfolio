@@ -1,13 +1,11 @@
 'use client'; // Mark as Client Component
-import React from 'react'
+import React, { FormEvent } from 'react'
 
 import { useState } from 'react';
-type FormData = {
-  firstName: string;
-  lastName: string;
-  email: string;
-  message: string;
-};
+import { toast } from 'sonner';
+import { FormData } from '../api/contact/types';
+import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
+
 const ContactMe = () => {
   const [formData, setFormData] = useState<FormData>({
     firstName: '',
@@ -16,44 +14,58 @@ const ContactMe = () => {
     message: ''
   });
 
-  const [isSubmitting] = useState(false);
-  const [submitStatus] = useState<{ success?: boolean; message?: string }>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { executeRecaptcha } = useGoogleReCaptcha();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
+    setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  /*const handleSubmit = async (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus({});
+    
+    if (!executeRecaptcha) {
+      toast.error('CAPTCHA not available', {
+        description: 'Please try again later',
+      });
+      return;
+    }
 
+    setIsSubmitting(true);
+    
     try {
-      // Replace with your actual submission logic
+      // Execute reCAPTCHA
+      const token = await executeRecaptcha('contactSubmit');
+      
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          recaptchaToken: token
+        }),
       });
 
+      const result = await response.json();
+
       if (response.ok) {
-        setSubmitStatus({ success: true, message: 'Message sent successfully!' });
+        toast.success('Message sent successfully!');
         setFormData({ firstName: '', lastName: '', email: '', message: '' });
       } else {
-        throw new Error('Failed to submit form');
+        throw new Error(result.message || 'Failed to submit form');
       }
     } catch (error) {
-      setSubmitStatus({ success: false, message: 'Error submitting form. Please try again.' });
+      toast.error('Error submitting form', {
+        description: error instanceof Error ? error.message : 'Please try again later.',
+      });
     } finally {
       setIsSubmitting(false);
     }
-  };*/
+  };
+
   return (
     <>
 
@@ -62,13 +74,7 @@ const ContactMe = () => {
           Contact Me
         </h1>
 
-        {submitStatus.message && (
-          <div className={`mb-4 p-3 rounded-md ${submitStatus.success ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}>
-            {submitStatus.message}
-          </div>
-        )}
-
-        <form className='mx-10 sm:mx-40 mt-10 '> {/* onSubmit={handleSubmit} */}
+        <form className='mx-10 sm:mx-40 mt-10 ' onSubmit={handleSubmit}> 
           {/* Name Row */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
             <div>

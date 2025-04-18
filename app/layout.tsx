@@ -6,7 +6,7 @@ config.autoAddCss = false;
 
 import "./globals.css";
 import Script from "next/script";
-import { ThemeProvider } from "./components/theme-provider";
+import { Providers } from "./providers";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,11 +24,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Jasjeev Singh Kohli - Portfolio",
     description: "Professional portfolio showcasing my work and projects",
-    url: "http://jasjeev-portfolio.vercel.app/", // Replace with your actual domain
+    url: "http://jasjeev-portfolio.vercel.app/",
     siteName: "Jasjeev's Portfolio",
     images: [
       {
-        url: "./main.png", // Path to your image in public folder
+        url: "./main.png",
         width: 1200,
         height: 630,
         alt: "Jasjeev Singh Kohli Portfolio Preview",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Jasjeev Singh Kohli - Portfolio",
     description: "Professional portfolio showcasing my work and projects",
-    images: ["./main.png"], // Same image for Twitter
+    images: ["./main.png"],
   },
 };
 
@@ -56,21 +56,13 @@ export default function RootLayout({
         <Script
           src="https://kit.fontawesome.com/9f0ae78aa4.js"
           crossOrigin="anonymous"
-        ></Script>
+        />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased `}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          
-
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <Providers>
           {children}
-        </ThemeProvider>
+        </Providers>
       </body>
-
     </html>
   );
 }

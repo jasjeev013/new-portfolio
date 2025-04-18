@@ -34,7 +34,7 @@ const EducationSection = () => {
                         <div className="shrink-0 ">
                             <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center">
 
-                                <Image height={100} width={100} src="/education/newEra.jfif" alt="Mait" className='w-full h-full rounded-full' />
+                                <Image height={100} width={100} src="/education/newEra.png" alt="Mait" className='w-full h-full rounded-full' />
                             </div>
                         </div>
 
