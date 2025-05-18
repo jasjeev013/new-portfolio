@@ -4,12 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import React, { useRef, useState } from 'react'
 import Image from 'next/image'
-
-const HackathonsSection = () => {
-    const [showAll, setShowAll] = useState(false);
-    const hackathonSectionRef = useRef<HTMLDivElement>(null);
-
-    const hackathons = [
+ const hackathons = [
         {
             id: 1,
             logo: "/hackathons/smartIndia.png",
@@ -65,15 +60,15 @@ const HackathonsSection = () => {
             certificateLink: "https://drive.google.com/file/d/14JeY9f7cWNqUsqdNiOJ_wJ7ZjZdF46zM/view"
         }
     ];
-
+const HackathonsSection = () => {
+     const [showAll, setShowAll] = useState(false);
+    const hackathonSectionRef = useRef<HTMLDivElement>(null);
     const visibleHackathons = showAll ? hackathons : hackathons.slice(0, 3);
-
 
     const toggleShowAll = () => {
         const willShowAll = !showAll;
         setShowAll(willShowAll);
 
-        // Only scroll to top when showing less
         if (!willShowAll && hackathonSectionRef.current) {
             hackathonSectionRef.current.scrollIntoView({
                 behavior: 'smooth',
@@ -88,24 +83,21 @@ const HackathonsSection = () => {
                 <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white animate-slide-in-up-3">
                     Hackathon & Contests
                 </h1>
-
             </div>
 
             <div className='pl-2'>
                 {visibleHackathons.map((hackathon) => (
                     <div key={hackathon.id} className="flex items-start gap-6 mt-6 animate-slide-in-up-3">
-                        {/* Column 1: Logo */}
                         <div className="shrink-0">
                             <Image
-                                height={100}
-                                width={100}
+                                height={64}
+                                width={64}
                                 src={hackathon.logo}
-                                alt=""
-                                className='w-10 h-10 sm:w-16 sm:h-16 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center'
+                                alt={`${hackathon.title} logo`}
+                                className='w-10 h-10 sm:w-16 sm:h-16 rounded-full bg-gray-200 dark:bg-gray-700'
                             />
                         </div>
 
-                        {/* Column 2: Details */}
                         <div className="flex-3/4">
                             <h2 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white">
                                 {hackathon.title}
@@ -124,6 +116,7 @@ const HackathonsSection = () => {
                                 target='_blank'
                                 rel="noopener noreferrer"
                                 className='flex items-center gap-2'
+                                aria-label={`View certificate for ${hackathon.title}`}
                             >
                                 <Badge className='text-sm mt-2'>
                                     <FontAwesomeIcon icon={faGithub} /> Certificate
@@ -131,7 +124,6 @@ const HackathonsSection = () => {
                             </a>
                         </div>
 
-                        {/* Column 3: Date (hidden on mobile) */}
                         <div className="flex-1/4 text-right sm:block hidden">
                             <p className="text-gray-600 dark:text-gray-300">
                                 {hackathon.date}
@@ -144,6 +136,7 @@ const HackathonsSection = () => {
                         <button
                             onClick={toggleShowAll}
                             className="text-sm font-medium text-blue-600 dark:text-blue-400 hover:underline mt-5"
+                            aria-label={showAll ? 'Show fewer hackathons' : 'Show more hackathons'}
                         >
                             <Badge className='text-sm mt-2 bg-blue-600 text-white'>
                                 {showAll ? 'Show Less' : 'See More'}
@@ -151,7 +144,6 @@ const HackathonsSection = () => {
                         </button>
                     </div>
                 )}
-
             </div>
         </div>
     );

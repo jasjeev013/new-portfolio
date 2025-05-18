@@ -43,18 +43,25 @@ const Navbar = () => {
   };
 
   if (!mounted) {
-    // Return a placeholder with the same dimensions during SSR
     return (
-      <nav className="fixed top-5 left-1/2 transform -translate-x-1/2 z-50 w-[calc(100%)] h-14">
-        {/* Empty placeholder to prevent layout shift */}
+      <nav className="fixed top-5 left-1/2 transform -translate-x-1/2 z-50 w-[73%] sm:max-w-sm h-14 bg-white/20 dark:bg-[#201313]/70 border border-white/20 dark:border-black/10 rounded-4xl shadow-lg">
+        <div className="mx-auto sm:px-6 lg:px-8">
+          <div className="flex items-center justify-center h-14">
+            <div className="md:flex text-lg space-x-6 sm:space-x-8">
+              {/* Placeholder icons with same dimensions */}
+              {[...Array(6)].map((_, i) => (
+                <span key={i} className="w-4 h-4 inline-block" />
+              ))}
+            </div>
+          </div>
+        </div>
       </nav>
     );
   }
 
   return (
     <nav
-      className={`fixed top-5 bg-white animate-slide-in-down animate-blur-out left-1/2 transform -translate-x-1/2 z-50   backdrop-blur-xl bg-white/20 dark:bg-[#201313]/70 border border-white/20 dark:border-black/10 rounded-4xl shadow-lg transition-all duration-300 ease-in-out ${isHovered ? 'w-[calc(73%)] sm:max-w-sm' : 'w-[calc(73%)] sm:max-w-sm'
-        }`}
+      className={`fixed top-5 bg-white animate-slide-in-down animate-blur-out left-1/2 transform -translate-x-1/2 z-50 backdrop-blur-xl bg-white/20 dark:bg-[#201313]/70 border border-white/20 dark:border-black/10 rounded-4xl shadow-lg transition-all duration-300 ease-in-out ${isHovered ? 'w-[calc(73%)] sm:max-w-sm' : 'w-[calc(73%)] sm:max-w-sm'}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -107,14 +114,10 @@ const Navbar = () => {
               className="group text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-300 transition-all duration-300"
               aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
             >
-              {mounted && (
-                <FontAwesomeIcon
-                  icon={theme === 'dark' ? faSun : faMoon}
-                  className={`text-black dark:text-white/90 group-hover:mx-2 transition-all duration-300 ${
-                    isRotating ? 'rotate-[360deg]' : ''
-                  }`}
-                />
-              )}
+              <FontAwesomeIcon
+                icon={theme === 'dark' ? faSun : faMoon}
+                className={`text-black dark:text-white/90 group-hover:mx-2 transition-all duration-300 ${isRotating ? 'rotate-[360deg]' : ''}`}
+              />
             </button>
           </div>
         </div>

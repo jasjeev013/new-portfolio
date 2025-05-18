@@ -12,16 +12,19 @@ import { Providers } from "./providers";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: 'swap', // Add for better font loading
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: 'swap', // Add for better font loading
 });
 
 export const metadata: Metadata = {
   title: "Jasjeev Singh Kohli - Portfolio",
   description: "Professional portfolio showcasing my work and projects",
+  metadataBase: new URL("http://jasjeev-portfolio.vercel.app/"), // Add metadataBase
   openGraph: {
     title: "Jasjeev Singh Kohli - Portfolio",
     description: "Professional portfolio showcasing my work and projects",
@@ -29,7 +32,7 @@ export const metadata: Metadata = {
     siteName: "Jasjeev's Portfolio",
     images: [
       {
-        url: "./main.png",
+        url: "/main.png", // Changed from ./ to /
         width: 1200,
         height: 630,
         alt: "Jasjeev Singh Kohli Portfolio Preview",
@@ -42,7 +45,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Jasjeev Singh Kohli - Portfolio",
     description: "Professional portfolio showcasing my work and projects",
-    images: ["./main.png"],
+    images: ["/main.png"], // Changed from ./ to /
   },
 };
 
@@ -57,6 +60,7 @@ export default function RootLayout({
         <Script
           src="https://kit.fontawesome.com/9f0ae78aa4.js"
           crossOrigin="anonymous"
+          strategy="lazyOnload" // Add lazy loading for FontAwesome
         />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>

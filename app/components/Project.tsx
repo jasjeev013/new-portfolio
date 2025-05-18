@@ -2,14 +2,7 @@
 import { Badge } from '@/components/ui/badge'
 import React, { useRef, useState } from 'react'
 import ProjectCard from './ProjectCard';
-
-
-const Project = () => {
-
-    const [showAll, setShowAll] = useState(false);
-    const projectSectionRef = useRef<HTMLDivElement>(null);
-
-    const projects = [
+const projects = [
 
 
         {
@@ -59,13 +52,17 @@ const Project = () => {
         }
         // Add more projects as needed
     ];
+
+const Project = () => {
+
+    const [showAll, setShowAll] = useState(false);
+    const projectSectionRef = useRef<HTMLDivElement>(null);
     const visibleProjects = showAll ? projects : projects.slice(0, 4);
 
     const toggleShowAll = () => {
         const willShowAll = !showAll;
         setShowAll(willShowAll);
 
-        // Only scroll to top when showing less
         if (!willShowAll && projectSectionRef.current) {
             projectSectionRef.current.scrollIntoView({
                 behavior: 'smooth',
@@ -73,6 +70,8 @@ const Project = () => {
             });
         }
     };
+
+
     return (
         <>
             <div id='projects' ref={projectSectionRef} className='bg-red lg:px-25 md:px-0 sm:px-0 ml-5 md:ml-16 mt-15 animate-blur-out-3'>
@@ -96,17 +95,18 @@ const Project = () => {
                     </div>
 
                     {projects.length > 4 && (
-                        <div className='flex mr-5 justify-end align-end'>
-                            <button
-                                onClick={toggleShowAll}
-                                className="text-sm font-medium text-blue-600 dark:text-blue-400 hover:underline mt-5"
-                            >
-                                <Badge className='text-sm mt-2 bg-blue-600 text-white'>
-                                    {showAll ? 'Show Less' : 'See More'}
-                                </Badge>
-                            </button>
-                        </div>
-                    )}
+                    <div className='flex mr-5 justify-end align-end'>
+                        <button
+                            onClick={toggleShowAll}
+                            className="text-sm font-medium text-blue-600 dark:text-blue-400 hover:underline mt-5"
+                            aria-label={showAll ? 'Show fewer projects' : 'Show more projects'}
+                        >
+                            <Badge className='text-sm mt-2 bg-blue-600 text-white'>
+                                {showAll ? 'Show Less' : 'See More'}
+                            </Badge>
+                        </button>
+                    </div>
+                )}
                 </div>
             </div>
         </>
