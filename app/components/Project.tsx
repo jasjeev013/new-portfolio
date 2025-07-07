@@ -6,8 +6,8 @@ const projects = [
 
 
         {
-            videoUrl: "/projectVideos/hustleHub.mp4",
-            posterUrl: "https://res.cloudinary.com/dt8ndepvi/video/upload/v1751886424/hustleHub_ny3w3v.mp4",
+            videoUrl: "https://res.cloudinary.com/dt8ndepvi/video/upload/v1751886424/hustleHub_ny3w3v.mp4",
+            posterUrl: "/projectVideos/hustleHub.mp4",
             title: "Hustle Hub: The Authentic Scheduler",
             description: "A Task Management System with secure authentication, task tracking, prioritization, categorization, and notifications. It helps users stay organized, prioritize tasks, and receive timely updates, ensuring smooth and efficient productivity.",
             technologies: ["Angular", "NgRx", "Spring Boot", "Spring Data JPA", "JWT", "PostgreSQL", "AWS EC2"],
@@ -15,8 +15,8 @@ const projects = [
             links: ["https://github.com/jasjeev013/hustle-hub"]
         },
         {
-            videoUrl: "/projectVideos/neighbourly.mp4",
-            posterUrl: "https://res.cloudinary.com/dt8ndepvi/video/upload/v1751886653/neighbourly_p1u81p.mp4",
+            videoUrl: "https://res.cloudinary.com/dt8ndepvi/video/upload/v1751886653/neighbourly_p1u81p.mp4",
+            posterUrl: "/projectVideos/neighbourly.mp4",
             title: "Neighbourly: Let's Connect Communities",
             description: "Neighbourly connects people by allowing them to create, publish, and participate in events like hackathons, contests, and social services. Users can register, volunteer, and clarify doubts, promoting community engagement.",
             technologies: ["React", "Recoil", "Axios", "Tailwind CSS", "Node.js", "Express.js", "MongoDB"],
@@ -24,8 +24,8 @@ const projects = [
             links: ["https://github.com/jasjeev013/neighbouly-frontend", "https://github.com/jasjeev013/neighbourly-backend", "https://neighbourly-ebon.vercel.app/"]
         },
         {
-            videoUrl: "/projectVideos/bharatRanch.mp4",
-            posterUrl: "https://res.cloudinary.com/dt8ndepvi/video/upload/v1751886544/bharatRanch_p89ty2.mp4",
+            videoUrl: "https://res.cloudinary.com/dt8ndepvi/video/upload/v1751886544/bharatRanch_p89ty2.mp4",
+            posterUrl: "/projectVideos/bharatRanch.mp4",
             title: "BharatRanch: The Ultimate Ranch",
             description: "It connects farmers and buyers for bulk transactions with minimal margins. It enables direct sales between farmers and dealers, while a chat feature facilitates seamless communication for buying, selling, and negotiating.",
             technologies: ["React", "Recoil", "Axios", "Material UI", "Node.js", "Express.js", "MongoDB", "Bootstrap", "Cloudinary"],
@@ -33,8 +33,8 @@ const projects = [
             links: ["https://github.com/jasjeev013/bharat-ranch"]
         },
         {
-            videoUrl: "/projectVideos/memoryHub.mp4",
-            posterUrl: "/thumbnails/weather-thumb.jpghttps://res.cloudinary.com/dt8ndepvi/video/upload/v1751886404/memoryHub_zjbsy7.mp4",
+            videoUrl: "https://res.cloudinary.com/dt8ndepvi/video/upload/v1751886404/memoryHub_zjbsy7.mp4",
+            posterUrl: "/projectVideos/memoryHub.mp4",
             title: "Memory Hub",
             description: "It is a web platform that lets users save important links, organize them with tags, and easily search by title, category, or tags. It offers a user-friendly interface for efficient link management.",
             technologies: ["React", "Redux", "Bootstrap", "Nodejs", "Express.js", "MongoDB", "Vercel"],
@@ -42,8 +42,8 @@ const projects = [
             links: ["https://github.com/jasjeev013/memoryhub", "https://memoryhub.vercel.app/", "https://memoryhub-backend.vercel.app/"]
         },
         {
-            videoUrl: "/projectVideos/onelife.mp4",
-            posterUrl: "https://res.cloudinary.com/dt8ndepvi/video/upload/v1751886430/onelife_lawmuo.mp4",
+            videoUrl: "https://res.cloudinary.com/dt8ndepvi/video/upload/v1751886430/onelife_lawmuo.mp4",
+            posterUrl: "/projectVideos/onelife.mp4",
             title: "OneLife: The God's Own",
             description: "It is a backend API that stores data on hospitals, including bed availability, doctor vacancies, and specializations. It helps users easily find hospitals by area or specialization, especially in emergencies, and collects important data for better healthcare management.",
             technologies: ["Springboot", "Spring", "Java", "MySQL", "Maven", "Swagger ui"],
