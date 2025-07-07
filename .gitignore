@@ -40,3 +40,10 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 secret.txt
+/public/projectVideos/*
+/public/projectVideos/bharatRanch.mp4
+public/projectVideos/hustleHub.mp4
+public/projectVideos/memoryHub.mp4
+public/projectVideos/neighbourly.mp4
+public/projectVideos/onelife.mp4
+
