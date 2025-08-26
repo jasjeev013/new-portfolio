@@ -2,59 +2,66 @@
 import { Badge } from '@/components/ui/badge'
 import React, { useRef, useState } from 'react'
 import ProjectCard from './ProjectCard';
+import { motion, AnimatePresence } from "framer-motion";
+
 const projects = [
-
-
-        {
-            videoUrl: "https://res.cloudinary.com/dt8ndepvi/video/upload/v1751886424/hustleHub_ny3w3v.mp4",
-            posterUrl: "/projectVideos/hustleHub.mp4",
-            title: "Hustle Hub: The Authentic Scheduler",
-            description: "A Task Management System with secure authentication, task tracking, prioritization, categorization, and notifications. It helps users stay organized, prioritize tasks, and receive timely updates, ensuring smooth and efficient productivity.",
-            technologies: ["Angular", "NgRx", "Spring Boot", "Spring Data JPA", "JWT", "PostgreSQL", "AWS EC2"],
-            linksName: ["GitHub"],
-            links: ["https://github.com/jasjeev013/hustle-hub"]
-        },
-        {
-            videoUrl: "https://res.cloudinary.com/dt8ndepvi/video/upload/v1751886653/neighbourly_p1u81p.mp4",
-            posterUrl: "/projectVideos/neighbourly.mp4",
-            title: "Neighbourly: Let's Connect Communities",
-            description: "Neighbourly connects people by allowing them to create, publish, and participate in events like hackathons, contests, and social services. Users can register, volunteer, and clarify doubts, promoting community engagement.",
-            technologies: ["React", "Recoil", "Axios", "Tailwind CSS", "Node.js", "Express.js", "MongoDB"],
-            linksName: ["GitHub (Frontend)", "GitHub (Backend)", "Live (frontend)"],
-            links: ["https://github.com/jasjeev013/neighbouly-frontend", "https://github.com/jasjeev013/neighbourly-backend", "https://neighbourly-ebon.vercel.app/"]
-        },
-        {
-            videoUrl: "https://res.cloudinary.com/dt8ndepvi/video/upload/v1751886544/bharatRanch_p89ty2.mp4",
-            posterUrl: "/projectVideos/bharatRanch.mp4",
-            title: "BharatRanch: The Ultimate Ranch",
-            description: "It connects farmers and buyers for bulk transactions with minimal margins. It enables direct sales between farmers and dealers, while a chat feature facilitates seamless communication for buying, selling, and negotiating.",
-            technologies: ["React", "Recoil", "Axios", "Material UI", "Node.js", "Express.js", "MongoDB", "Bootstrap", "Cloudinary"],
-            linksName: ["GitHub"],
-            links: ["https://github.com/jasjeev013/bharat-ranch"]
-        },
-        {
-            videoUrl: "https://res.cloudinary.com/dt8ndepvi/video/upload/v1751886404/memoryHub_zjbsy7.mp4",
-            posterUrl: "/projectVideos/memoryHub.mp4",
-            title: "Memory Hub",
-            description: "It is a web platform that lets users save important links, organize them with tags, and easily search by title, category, or tags. It offers a user-friendly interface for efficient link management.",
-            technologies: ["React", "Redux", "Bootstrap", "Nodejs", "Express.js", "MongoDB", "Vercel"],
-            linksName: ["GitHub", "Live (frontend)", "Live (backend)"],
-            links: ["https://github.com/jasjeev013/memoryhub", "https://memoryhub.vercel.app/", "https://memoryhub-backend.vercel.app/"]
-        },
-        {
-            videoUrl: "https://res.cloudinary.com/dt8ndepvi/video/upload/v1751886430/onelife_lawmuo.mp4",
-            posterUrl: "/projectVideos/onelife.mp4",
-            title: "OneLife: The God's Own",
-            description: "It is a backend API that stores data on hospitals, including bed availability, doctor vacancies, and specializations. It helps users easily find hospitals by area or specialization, especially in emergencies, and collects important data for better healthcare management.",
-            technologies: ["Springboot", "Spring", "Java", "MySQL", "Maven", "Swagger ui"],
-            linksName: ["GitHub"],
-            links: ["https://github.com/jasjeev013/OneLife"]
-        }
-        // Add more projects as needed
-    ];
+    {
+        videoUrl: "https://res.cloudinary.com/dt8ndepvi/video/upload/v1756214832/GoRentzyy_lelant.mp4",
+        posterUrl: "/projectVideos/goRentzyy.mp4",
+        title: "Go Rentzyy: Car Rental System",
+        description: "A full-featured peer-to-peer car rental platform connecting Hosts and Renters with secure booking, dynamic pricing, and real-time availability. It streamlines car listing, payments, agreements, and admin controls for a seamless rental experience.",
+        technologies: ["Next.js","Shadcn UI", "Spring Boot","OAuth 2.0","Razorpay", "PostgreSQL", "Containerization","JUnit","Redis","ElasticSearch","AWS S3","Twilio","Swagger"],
+        linksName: ["GitHub","Docker"],
+        links: ["https://github.com/jasjeev013/GoRentzyy","https://hub.docker.com/r/jasjeev1902/gorentzyy-backend"]
+    },
+    {
+        videoUrl: "https://res.cloudinary.com/dt8ndepvi/video/upload/v1751886424/hustleHub_ny3w3v.mp4",
+        posterUrl: "/projectVideos/hustleHub.mp4",
+        title: "Hustle Hub: The Authentic Scheduler",
+        description: "A Task Management System with secure authentication, task tracking, prioritization, categorization, and notifications. It helps users stay organized, prioritize tasks, and receive timely updates, ensuring smooth and efficient productivity.",
+        technologies: ["Angular", "NgRx", "Spring Boot", "Spring Data JPA", "JWT", "PostgreSQL", "AWS EC2","Scheduling Algorithms","Cron job","Quartz Scheduler"],
+        linksName: ["GitHub"],
+        links: ["https://github.com/jasjeev013/hustle-hub"]
+    },
+    {
+        videoUrl: "https://res.cloudinary.com/dt8ndepvi/video/upload/v1751886653/neighbourly_p1u81p.mp4",
+        posterUrl: "/projectVideos/neighbourly.mp4",
+        title: "Neighbourly: Let's Connect Communities",
+        description: "Neighbourly connects people by allowing them to create, publish, and participate in events like hackathons, contests, and social services. Users can register, volunteer, and clarify doubts, promoting community engagement.",
+        technologies: ["React", "Recoil", "Axios", "Tailwind CSS", "Node.js", "Express.js", "MongoDB"],
+        linksName: ["GitHub (Frontend)", "GitHub (Backend)", "Live (frontend)"],
+        links: ["https://github.com/jasjeev013/neighbouly-frontend", "https://github.com/jasjeev013/neighbourly-backend", "https://neighbourly-ebon.vercel.app/"]
+    },
+    {
+        videoUrl: "https://res.cloudinary.com/dt8ndepvi/video/upload/v1751886544/bharatRanch_p89ty2.mp4",
+        posterUrl: "/projectVideos/bharatRanch.mp4",
+        title: "BharatRanch: The Ultimate Ranch",
+        description: "It connects farmers and buyers for bulk transactions with minimal margins. It enables direct sales between farmers and dealers, while a chat feature facilitates seamless communication for buying, selling, and negotiating.",
+        technologies: ["React", "Recoil", "Axios", "Material UI", "Node.js", "Express.js", "MongoDB", "Bootstrap", "Cloudinary"],
+        linksName: ["GitHub"],
+        links: ["https://github.com/jasjeev013/bharat-ranch"]
+    },
+    {
+        videoUrl: "https://res.cloudinary.com/dt8ndepvi/video/upload/v1751886404/memoryHub_zjbsy7.mp4",
+        posterUrl: "/projectVideos/memoryHub.mp4",
+        title: "Memory Hub",
+        description: "It is a web platform that lets users save important links, organize them with tags, and easily search by title, category, or tags. It offers a user-friendly interface for efficient link management.",
+        technologies: ["React", "Redux", "Bootstrap", "Nodejs", "Express.js", "MongoDB", "Vercel"],
+        linksName: ["GitHub", "Live (frontend)", "Live (backend)"],
+        links: ["https://github.com/jasjeev013/memoryhub", "https://memoryhub.vercel.app/", "https://memoryhub-backend.vercel.app/"]
+    },
+    {
+        videoUrl: "https://res.cloudinary.com/dt8ndepvi/video/upload/v1751886430/onelife_lawmuo.mp4",
+        posterUrl: "/projectVideos/onelife.mp4",
+        title: "OneLife: The God's Own",
+        description: "It is a backend API that stores data on hospitals, including bed availability, doctor vacancies, and specializations. It helps users easily find hospitals by area or specialization, especially in emergencies, and collects important data for better healthcare management.",
+        technologies: ["Springboot", "Spring", "Java", "MySQL", "Maven", "Swagger ui"],
+        linksName: ["GitHub"],
+        links: ["https://github.com/jasjeev013/OneLife"]
+    }
+];
 
 const Project = () => {
-
     const [showAll, setShowAll] = useState(false);
     const projectSectionRef = useRef<HTMLDivElement>(null);
     const visibleProjects = showAll ? projects : projects.slice(0, 4);
@@ -71,42 +78,59 @@ const Project = () => {
         }
     };
 
-
     return (
         <>
-            <div id='projects' ref={projectSectionRef} className='bg-red lg:px-25 md:px-0 sm:px-0 ml-5 md:ml-16 mt-15 animate-blur-out-3'>
-                <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white animate-slide-in-up-3">
+            <div id='projects' ref={projectSectionRef} className='bg-red lg:px-25 md:px-0 sm:px-0 ml-5 md:ml-16 mt-15'>
+                <motion.h1
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                    className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white"
+                >
                     Projects
-                </h1>
+                </motion.h1>
+
                 <div className="container mx-auto px-5 sm:px-14 py-12">
                     <div className="grid grid-cols-1 md:grid-cols-2 p-2 lg:grid-cols-2 gap-7">
-                        {visibleProjects.map((project, index) => (
-                            <ProjectCard
-                                key={index}
-                                videoUrl={project.videoUrl}
-                                posterUrl={project.posterUrl}
-                                title={project.title}
-                                description={project.description}
-                                technologies={project.technologies}
-                                linksName={project.linksName}
-                                links={project.links}
-                            />
-                        ))}
+                        <AnimatePresence>
+                            {visibleProjects.map((project, index) => (
+                                <motion.div
+                                    key={index}
+                                    initial={{ opacity: 0, scale: 0.95, y: 20 }}
+                                    animate={{ opacity: 1, scale: 1, y: 0 }}
+                                    exit={{ opacity: 0, scale: 0.9 }}
+                                    transition={{ duration: 0.4, delay: index * 0.1 }}
+                                    whileHover={{ scale: 1.02 }}
+                                >
+                                    <ProjectCard
+                                        videoUrl={project.videoUrl}
+                                        posterUrl={project.posterUrl}
+                                        title={project.title}
+                                        description={project.description}
+                                        technologies={project.technologies}
+                                        linksName={project.linksName}
+                                        links={project.links}
+                                    />
+                                </motion.div>
+                            ))}
+                        </AnimatePresence>
                     </div>
 
                     {projects.length > 4 && (
-                    <div className='flex mr-5 justify-end align-end'>
-                        <button
-                            onClick={toggleShowAll}
-                            className="text-sm font-medium text-blue-600 dark:text-blue-400 hover:underline mt-5"
-                            aria-label={showAll ? 'Show fewer projects' : 'Show more projects'}
-                        >
-                            <Badge className='text-sm mt-2 bg-blue-600 text-white'>
-                                {showAll ? 'Show Less' : 'See More'}
-                            </Badge>
-                        </button>
-                    </div>
-                )}
+                        <div className='flex mr-5 justify-end align-end'>
+                            <motion.button
+                                onClick={toggleShowAll}
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                                className="text-sm font-medium text-blue-600 dark:text-blue-400 hover:underline mt-5"
+                                aria-label={showAll ? 'Show fewer projects' : 'Show more projects'}
+                            >
+                                <Badge className='text-sm mt-2 bg-blue-600 text-white'>
+                                    {showAll ? 'Show Less' : 'See More'}
+                                </Badge>
+                            </motion.button>
+                        </div>
+                    )}
                 </div>
             </div>
         </>

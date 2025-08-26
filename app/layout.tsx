@@ -24,11 +24,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Jasjeev Singh Kohli - Portfolio",
   description: "Professional portfolio showcasing my work and projects",
-  metadataBase: new URL("http://jasjeev-portfolio.vercel.app/"), // Add metadataBase
+  metadataBase: new URL("https://jasjeev-portfolio.vercel.app/"), // Add metadataBase
   openGraph: {
     title: "Jasjeev Singh Kohli - Portfolio",
     description: "Professional portfolio showcasing my work and projects",
-    url: "http://jasjeev-portfolio.vercel.app/",
+    url: "https//jasjeev-portfolio.vercel.app/",
     siteName: "Jasjeev's Portfolio",
     images: [
       {

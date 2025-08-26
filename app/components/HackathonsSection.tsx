@@ -7,6 +7,15 @@ import Image from 'next/image'
  const hackathons = [
         {
             id: 1,
+            logo: "/hackathons/amazon.png",
+            title: "Top 75 Coders in HackOn with Amazon - Season 5",
+            location: "Delhi",
+            date: "Jun 2025 - July 2025",
+            description: "Selected among the Top 75 Coders in HackOn with Amazon - Season 5 based on performance in a rigorous coding assessment.Demonstrated strong algorithmic thinking, problem-solving skills, and coding proficiency in a highly competitive environment.",
+            certificateLink: "https://unstop-dot-yamm-track.appspot.com/21xKtpZShKKzpSYwhdFL85T2UR3CKO5NNfxh8NO2PE68JqEfklwFXas1SvL2HSX62m8R3cTjigQLvrjxF9jVGH8OWcC1-fyXeIrQqbFk-d9lp9ftnrmPWsgIiyhVzuUoHZOlP_rS0CuWbUfkTRvM1IL4wIqcy3HSmmwnv9gzhR1B5Jl2L5xs2PLV4QLfs1oj2mh861zMu2lm6KOxZKWkHCLGaLI9LmIUNYYMs8i2Y--gegDgi3kO8APKS"
+        },
+        {
+            id: 2,
             logo: "/hackathons/smartIndia.png",
             title: "Smart India Hackathon 2024 Finalist",
             location: "Noida",
@@ -15,7 +24,7 @@ import Image from 'next/image'
             certificateLink: "https://drive.google.com/file/d/1DAeRb6vscpivKjsHztSe1-Mg_IqaSMDS/view"
         },
         {
-            id: 2,
+            id: 3,
             logo: "/hackathons/buildwithDelhi.jpeg",
             title: "Build With Delhi Hackathon Finalist",
             location: "Noida",
@@ -24,7 +33,7 @@ import Image from 'next/image'
             certificateLink: "https://drive.google.com/file/d/11D-s2H6nfK_Kfd5d9wB3JEM9oFzF2Sam/view"
         },
         {
-            id: 3,
+            id: 4,
             logo: "/hackathons/gssoc.jpeg",
             title: "GirlScript Summer of Code 2024",
             location: "Noida",
@@ -33,7 +42,7 @@ import Image from 'next/image'
             certificateLink: "https://drive.google.com/file/d/12VaGp_-n4hywzNhvsojX5sh-SQTRY0PT/view?usp=sharing"
         },
         {
-            id: 4,
+            id: 5,
             logo: "/hackathons/cloud.png",
             title: "Google Cloud Study Jam 2024 Finalist",
             location: "Noida",
@@ -42,7 +51,7 @@ import Image from 'next/image'
             certificateLink: "https://drive.google.com/file/d/1BlfVgimE6XELmdjJlkoCbJdKuM6CFgYd/view"
         },
         {
-            id: 5,
+            id:6,
             logo: "/hackathons/cloud.png",
             title: "Google Cloud Study Jam 2023 Finalist",
             location: "Noida",
@@ -51,7 +60,7 @@ import Image from 'next/image'
             certificateLink: "https://drive.google.com/file/d/1BlfVgimE6XELmdjJlkoCbJdKuM6CFgYd/view"
         },
         {
-            id: 6,
+            id: 7,
             logo: "/hackathons/IBMseal.png",
             title: "IBM SkillsBuild Winter Certification Program",
             location: "Noida",
