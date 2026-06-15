@@ -83,7 +83,8 @@ const Project = () => {
             <div id='projects' ref={projectSectionRef} className='bg-red lg:px-25 md:px-0 sm:px-0 ml-5 md:ml-16 mt-15'>
                 <motion.h1
                     initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-50px" }}
                     transition={{ duration: 0.6 }}
                     className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white"
                 >
@@ -97,7 +98,8 @@ const Project = () => {
                                 <motion.div
                                     key={index}
                                     initial={{ opacity: 0, scale: 0.95, y: 20 }}
-                                    animate={{ opacity: 1, scale: 1, y: 0 }}
+                                    whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                                    viewport={{ once: true, margin: "-50px" }}
                                     exit={{ opacity: 0, scale: 0.9 }}
                                     transition={{ duration: 0.4, delay: index * 0.1 }}
                                     whileHover={{ scale: 1.02 }}

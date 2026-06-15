@@ -8,6 +8,7 @@ import Project from '../components/Project'
 import HackathonsSection from '../components/HackathonsSection'
 import ContactMe from '../components/ContactMe'
 import FooterSection from '../components/FooterSection'
+import ScrollAnimationWrapper from '../components/ScrollAnimationWrapper'
 
 // This is a static page, no need for client-side rendering
 export default function HomePage() {
@@ -16,13 +17,13 @@ export default function HomePage() {
             <div className="w-full xl:w-[calc(75rem)] lg:w-[calc(100%-2rem)] md:w-full sm:w-full min-h-screen sm:p-4">
                 <Navbar />
                 <IntroductionSection />
-                <AboutSection />
-                <WorkExperienceSection />
-                <EducationSection />
-                <SkillsSections />
+                <ScrollAnimationWrapper><AboutSection /></ScrollAnimationWrapper>
+                <ScrollAnimationWrapper><WorkExperienceSection /></ScrollAnimationWrapper>
+                <ScrollAnimationWrapper><EducationSection /></ScrollAnimationWrapper>
+                <ScrollAnimationWrapper><SkillsSections /></ScrollAnimationWrapper>
                 <Project />
-                <HackathonsSection />
-                <ContactMe />
+                <ScrollAnimationWrapper><HackathonsSection /></ScrollAnimationWrapper>
+                <ScrollAnimationWrapper><ContactMe /></ScrollAnimationWrapper>
                 <FooterSection />
             </div>
         </div>

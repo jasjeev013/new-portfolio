@@ -7,11 +7,16 @@ const AboutSection = () => {
             <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white animate-slide-in-up-2">
                 About Me
             </h1>
-            <p className='text-md sm:text-lg mt-2 test-black dark:text-gray-300 animate-slide-in-up-2'>
-                {`I'm Jasjeev Singh`}, an undergrad at{' '}
-                <Link href='https://mait.ac.in/' target='_blank' className='text-black dark:text-white hover:underline'>
+            <p className="text-md sm:text-lg mt-2 text-black dark:text-gray-300 animate-slide-in-up-2">
+                {`I'm Jasjeev Singh`}, currently working as a Software Development Engineer at ION Group, where I contribute as a developer and analyst on DDPM projects. I completed my B.Tech from{" "}
+                <Link
+                    href="https://mait.ac.in/"
+                    target="_blank"
+                    className="text-black dark:text-white hover:underline"
+                >
                     Maharaja Agrasen Institute of Technology
-                </Link>, pursuing a B.Tech. I specialize in Java and Spring Boot, building scalable websites. As a Smart India Hackathon finalist and a two-year Google Cloud Study Jam participant, I am currently exploring AI/ML. Outside of tech, I am a graphic designer, video editor, and a chess enthusiast with a 900 rating.
+                </Link>
+                . I’m interested in software development, data-driven systems, and exploring AI/ML. Outside of tech, I enjoy graphic design, video editing, and chess.
             </p>
         </div>
     );

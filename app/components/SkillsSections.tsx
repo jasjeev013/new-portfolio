@@ -5,7 +5,8 @@ const skills = {
   backend: ["Node.js", "Express", "Bun.js", "EJS", "Spring Boot"],
   database: ["MySQL", "MongoDB", "PostgreSQL", "Redis", "Firebase", "AWS RDS"],
   devops: ["Kafka", "Nginx", "Docker", "Kubernetes", "AWS", "Azure", "GCP"],
-  aiMl: ["Python", "Flask", "Streamlit", "TensorFlow", "PyTorch", "Scikit-learn", "Pandas", "NumPy", "NLP"]
+  AIML: ["Python", "Flask", "Streamlit", "TensorFlow", "PyTorch", "Scikit-learn", "Pandas", "NumPy", "NLP"],
+  "Business Tools": ["Jira", "Confluence", "GitHub", "GitLab", "Power BI"]
 };
 
 const SkillsSections = () => {

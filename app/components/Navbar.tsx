@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
-import {
-  faComment,
+import { motion } from "framer-motion";
+ import { faComment,
   faFolder,
   faHouse,
   faPuzzlePiece,
@@ -44,7 +44,11 @@ const Navbar = () => {
 
   if (!mounted) {
     return (
-      <nav className="fixed top-5 left-1/2 transform -translate-x-1/2 z-50 w-[73%] sm:max-w-sm h-14 bg-white/20 dark:bg-[#201313]/70 border border-white/20 dark:border-black/10 rounded-4xl shadow-lg">
+      <motion.nav 
+        initial={{ y: -50, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="fixed top-5 left-1/2 transform -translate-x-1/2 z-50 w-[73%] sm:max-w-sm h-14 bg-white/20 dark:bg-[#201313]/70 border border-white/20 dark:border-black/10 rounded-4xl shadow-lg">
         <div className="mx-auto sm:px-6 lg:px-8">
           <div className="flex items-center justify-center h-14">
             <div className="md:flex text-lg space-x-6 sm:space-x-8">
@@ -55,13 +59,16 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-      </nav>
+      </motion.nav>
     );
   }
 
   return (
-    <nav
-      className={`fixed top-5 bg-white animate-slide-in-down animate-blur-out left-1/2 transform -translate-x-1/2 z-50 backdrop-blur-xl bg-white/20 dark:bg-[#201313]/70 border border-white/20 dark:border-black/10 rounded-4xl shadow-lg transition-all duration-300 ease-in-out ${isHovered ? 'w-[calc(73%)] sm:max-w-sm' : 'w-[calc(73%)] sm:max-w-sm'}`}
+    <motion.nav
+      initial={{ y: -50, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className={`fixed top-5 bg-white left-1/2 transform -translate-x-1/2 z-50 backdrop-blur-xl bg-white/20 dark:bg-[#201313]/70 border border-white/20 dark:border-black/10 rounded-4xl shadow-lg transition-all duration-300 ease-in-out ${isHovered ? 'w-[calc(73%)] sm:max-w-sm' : 'w-[calc(73%)] sm:max-w-sm'}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -122,7 +129,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 

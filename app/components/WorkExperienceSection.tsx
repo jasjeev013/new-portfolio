@@ -5,15 +5,33 @@ const WorkExperienceSection = () => {
     const experiences = [
         {
             id: 1,
+            company: "ION Group",
+            role: "Software Developer - Full Time",
+            period: "Jan 2026 - Present",
+            logo: "/workExperience/ion.png"
+        },{
+            id: 2,
+            company: "Infosys",
+            role: "Java Backend Developer - Intern",
+            period: "Oct 2025 - Dec 2025",
+            logo: "/workExperience/infosys.png"
+        },{
+            id: 3,
+            company: "PearlThoughts",
+            role: "Backend Developer -  Intern",
+            period: "Jun 2025 - Aug 2025",
+            logo: "/workExperience/PearlThoughts.png"
+        },{
+            id: 4,
             company: "Sopra Steria",
-            role: "Java Backend Developer",
-            period: "Aug 2024 - Dec 2024",
+            role: "Java Backend Developer - Intern",
+            period: "Aug 2024 - Oct 2024",
             logo: "/workExperience/sopra_steria.png"
         },
         {
-            id: 2,
+            id: 5,
             company: "IBM Skills build",
-            role: "Data Analytics Intern",
+            role: "Data Analytics - Intern",
             period: "Nov 2023 - Dec 2023",
             logo: "/workExperience/ibm.jpg"
         }
