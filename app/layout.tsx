@@ -63,7 +63,7 @@ export default function RootLayout({
           strategy="lazyOnload" // Add lazy loading for FontAwesome
         />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`} suppressHydrationWarning>
         <Providers>
           {children}
           <Analytics/>

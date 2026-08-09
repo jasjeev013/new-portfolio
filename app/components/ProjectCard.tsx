@@ -8,11 +8,10 @@ interface ProjectCardProps {
   description: string;
   technologies: string[];
   links: string[]; // Array of links
-  posterUrl?: string; // Optional thumbnail image
   linksName: string[]; // Array of link names
 }
 
-const ProjectCard = ({ videoUrl, title, description, technologies, links, linksName, posterUrl }: ProjectCardProps) => {
+const ProjectCard = ({ videoUrl, title, description, technologies, links, linksName }: ProjectCardProps) => {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
@@ -33,7 +32,6 @@ const ProjectCard = ({ videoUrl, title, description, technologies, links, linksN
         <video
           ref={videoRef}
           src={videoUrl}
-          poster={posterUrl}
           autoPlay
           muted
           loop

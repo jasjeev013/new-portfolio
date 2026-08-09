@@ -1,6 +1,8 @@
+"use client";
 import Image from 'next/image'
+import { motion } from 'framer-motion';
+import { containerVariants, itemVariants, titleVariants, viewportConfig } from '@/lib/animations';
 
-// This component can be fully server-rendered
 const WorkExperienceSection = () => {
     const experiences = [
         {
@@ -38,21 +40,35 @@ const WorkExperienceSection = () => {
     ];
 
     return (
-        <div id='workExperience' className='bg-red lg:px-25 ml-5 md:ml-16 mt-15 md:px-0 sm:px-0 animate-blur-out-3'>
-            <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white animate-slide-in-up-3">
+        <motion.div
+            id='workExperience'
+            className='bg-red lg:px-25 ml-5 md:ml-16 mt-15 md:px-0 sm:px-0'
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportConfig}
+        >
+            <motion.h1
+                variants={titleVariants}
+                className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white"
+            >
                 Work Experience
-            </h1>
+            </motion.h1>
             <div className='pl-2'>
                 {experiences.map((exp) => (
-                    <div key={exp.id} className="flex items-start gap-6 mt-6 animate-slide-in-up-3">
+                    <motion.div
+                        key={exp.id}
+                        variants={itemVariants}
+                        className="flex items-start gap-6 mt-6"
+                    >
                         <div className="shrink-0">
-                            <div className="w-16 h-16 rounded-full bg-white dark:bg-white flex items-center justify-center">
-                                <Image 
-                                    height={100} 
-                                    width={100} 
-                                    src={exp.logo} 
-                                    alt={`${exp.company} logo`} 
-                                    className="rounded-full"
+                            <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center">
+                                <Image
+                                    height={100}
+                                    width={100}
+                                    src={exp.logo}
+                                    alt={`${exp.company} logo`}
+                                    className="w-full h-full rounded-full"
                                 />
                             </div>
                         </div>
@@ -66,10 +82,10 @@ const WorkExperienceSection = () => {
                         <div className="flex-1 text-right sm:block hidden">
                             <p className="text-md sm:text-lg text-gray-600 dark:text-gray-300">{exp.period}</p>
                         </div>
-                    </div>
+                    </motion.div>
                 ))}
             </div>
-        </div>
+        </motion.div>
     );
 }
 

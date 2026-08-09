@@ -2,6 +2,8 @@
 import { useState } from 'react';
 import { toast } from 'sonner';
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
+import { motion } from 'framer-motion';
+import { containerVariants, itemVariants, titleVariants, viewportConfig } from '@/lib/animations';
 
 const ContactMe = () => {
   const [formData, setFormData] = useState({
@@ -63,12 +65,23 @@ const ContactMe = () => {
   };
 
   return (
-    <div id='contactMe' className='lg:px-25 px-0 ml-5 md:ml-16 mt-15 animate-blur-out-3'>
-      <h1 className="text-3xl font-bold text-gray-900 dark:text-white animate-slide-in-up-3">
+    <motion.div
+      id='contactMe'
+      className='lg:px-25 px-0 ml-5 md:ml-16 mt-15'
+      variants={containerVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={viewportConfig}
+    >
+      <motion.h1
+        variants={titleVariants}
+        className="text-3xl font-bold text-gray-900 dark:text-white"
+      >
         Contact Me
-      </h1>
+      </motion.h1>
 
-      <form 
+      <motion.form
+        variants={itemVariants}
         className='mx-10 sm:mx-40 mt-10'
         onSubmit={handleSubmit}
         aria-label="Contact form"
@@ -139,16 +152,18 @@ const ContactMe = () => {
           />
         </div>
 
-        <button
+        <motion.button
           type="submit"
           disabled={isSubmitting}
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.98 }}
           className={`w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
           aria-disabled={isSubmitting}
         >
           {isSubmitting ? 'Sending...' : 'Submit'}
-        </button>
-      </form>
-    </div>
+        </motion.button>
+      </motion.form>
+    </motion.div>
   );
 }
 

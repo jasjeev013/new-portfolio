@@ -1,6 +1,10 @@
+"use client";
 import React from 'react'
 import { Separator } from "@/components/ui/separator"
 import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { containerVariants, itemVariants, viewportConfig } from '@/lib/animations';
+
 const socialLinks = [
     {
         name: 'GitHub',
@@ -40,14 +44,21 @@ const socialLinks = [
     }
 ];
 const FooterSection = () => {
-
-
     return (
         <>
             <Separator className="mt-15" />
-            <footer className="w-full py-8">
+            <motion.footer
+                className="w-full py-8"
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={viewportConfig}
+            >
                 <div className="max-w-4xl mx-auto px-4">
-                    <div className="flex justify-center space-x-6 mb-4">
+                    <motion.div
+                        variants={itemVariants}
+                        className="flex justify-center space-x-6 mb-4"
+                    >
                         {socialLinks.map((social) => (
                             <Link
                                 key={social.name}
@@ -60,13 +71,16 @@ const FooterSection = () => {
                                 {social.icon}
                             </Link>
                         ))}
-                    </div>
+                    </motion.div>
 
-                    <div className="text-center text-gray-500 dark:text-gray-400 text-sm">
+                    <motion.div
+                        variants={itemVariants}
+                        className="text-center text-gray-500 dark:text-gray-400 text-sm"
+                    >
                         © {new Date().getFullYear()} Jasjeev Singh Kohli. All Rights Reserved.
-                    </div>
+                    </motion.div>
                 </div>
-            </footer>
+            </motion.footer>
         </>
     );
 }

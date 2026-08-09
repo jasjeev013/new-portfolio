@@ -18,12 +18,12 @@ export default function HomePage() {
                 <Navbar />
                 <IntroductionSection />
                 <ScrollAnimationWrapper><AboutSection /></ScrollAnimationWrapper>
-                <ScrollAnimationWrapper><WorkExperienceSection /></ScrollAnimationWrapper>
-                <ScrollAnimationWrapper><EducationSection /></ScrollAnimationWrapper>
-                <ScrollAnimationWrapper><SkillsSections /></ScrollAnimationWrapper>
+                <WorkExperienceSection />
+                <EducationSection />
+                <SkillsSections />
                 <Project />
-                <ScrollAnimationWrapper><HackathonsSection /></ScrollAnimationWrapper>
-                <ScrollAnimationWrapper><ContactMe /></ScrollAnimationWrapper>
+                <HackathonsSection />
+                <ContactMe />
                 <FooterSection />
             </div>
         </div>

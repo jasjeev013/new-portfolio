@@ -4,6 +4,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import React, { useRef, useState } from 'react'
 import Image from 'next/image'
+import { motion, AnimatePresence } from 'framer-motion';
+import { containerVariants, itemVariants, titleVariants, viewportConfig } from '@/lib/animations';
+
  const hackathons = [
         {
             id: 1,
@@ -87,74 +90,94 @@ const HackathonsSection = () => {
     };
 
     return (
-        <div id='hackathon' ref={hackathonSectionRef} className='bg-red lg:px-25 md:px-0 sm:px-0 ml-5 md:ml-16 mt-15 animate-blur-out-3'>
+        <motion.div
+            id='hackathon'
+            ref={hackathonSectionRef}
+            className='bg-red lg:px-25 md:px-0 sm:px-0 ml-5 md:ml-16 mt-15'
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportConfig}
+        >
             <div className="flex justify-between items-center">
-                <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white animate-slide-in-up-3">
+                <motion.h1
+                    variants={titleVariants}
+                    className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white"
+                >
                     Hackathon & Contests
-                </h1>
+                </motion.h1>
             </div>
 
             <div className='pl-2'>
-                {visibleHackathons.map((hackathon) => (
-                    <div key={hackathon.id} className="flex items-start gap-6 mt-6 animate-slide-in-up-3">
-                        <div className="shrink-0">
-                            <Image
-                                height={64}
-                                width={64}
-                                src={hackathon.logo}
-                                alt={`${hackathon.title} logo`}
-                                className='w-10 h-10 sm:w-16 sm:h-16 rounded-full bg-gray-200 dark:bg-gray-700'
-                            />
-                        </div>
+                <AnimatePresence>
+                    {visibleHackathons.map((hackathon) => (
+                        <motion.div
+                            key={hackathon.id}
+                            variants={itemVariants}
+                            className="flex items-start gap-6 mt-6"
+                            exit={{ opacity: 0, scale: 0.95, transition: { duration: 0.2 } }}
+                        >
+                            <div className="shrink-0">
+                                <Image
+                                    height={64}
+                                    width={64}
+                                    src={hackathon.logo}
+                                    alt={`${hackathon.title} logo`}
+                                    className='w-10 h-10 sm:w-16 sm:h-16 rounded-full bg-gray-200 dark:bg-gray-700'
+                                />
+                            </div>
 
-                        <div className="flex-3/4">
-                            <h2 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white">
-                                {hackathon.title}
-                            </h2>
-                            <p className="text-md sm:text-lg text-gray-600 dark:text-gray-300">
-                                {hackathon.location}
-                            </p>
-                            <p className="text-md sm:text-lg text-gray-600 dark:text-gray-300 sm:hidden block">
-                                {hackathon.date}
-                            </p>
-                            <p className="text-md sm:text-lg text-gray-600 dark:text-gray-300">
-                                {hackathon.description}
-                            </p>
-                            <a
-                                href={hackathon.certificateLink}
-                                target='_blank'
-                                rel="noopener noreferrer"
-                                className='flex items-center gap-2'
-                                aria-label={`View certificate for ${hackathon.title}`}
-                            >
-                                <Badge className='text-sm mt-2'>
-                                    <FontAwesomeIcon icon={faGithub} /> Certificate
-                                </Badge>
-                            </a>
-                        </div>
+                            <div className="flex-3/4">
+                                <h2 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white">
+                                    {hackathon.title}
+                                </h2>
+                                <p className="text-md sm:text-lg text-gray-600 dark:text-gray-300">
+                                    {hackathon.location}
+                                </p>
+                                <p className="text-md sm:text-lg text-gray-600 dark:text-gray-300 sm:hidden block">
+                                    {hackathon.date}
+                                </p>
+                                <p className="text-md sm:text-lg text-gray-600 dark:text-gray-300">
+                                    {hackathon.description}
+                                </p>
+                                <a
+                                    href={hackathon.certificateLink}
+                                    target='_blank'
+                                    rel="noopener noreferrer"
+                                    className='flex items-center gap-2'
+                                    aria-label={`View certificate for ${hackathon.title}`}
+                                >
+                                    <Badge className='text-sm mt-2'>
+                                        <FontAwesomeIcon icon={faGithub} /> Certificate
+                                    </Badge>
+                                </a>
+                            </div>
 
-                        <div className="flex-1/4 text-right sm:block hidden">
-                            <p className="text-gray-600 dark:text-gray-300">
-                                {hackathon.date}
-                            </p>
-                        </div>
-                    </div>
-                ))}
+                            <div className="flex-1/4 text-right sm:block hidden">
+                                <p className="text-gray-600 dark:text-gray-300">
+                                    {hackathon.date}
+                                </p>
+                            </div>
+                        </motion.div>
+                    ))}
+                </AnimatePresence>
                 {hackathons.length > 3 && (
                     <div className='flex mr-5 justify-end align-end'>
-                        <button
+                        <motion.button
                             onClick={toggleShowAll}
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
                             className="text-sm font-medium text-blue-600 dark:text-blue-400 hover:underline mt-5"
                             aria-label={showAll ? 'Show fewer hackathons' : 'Show more hackathons'}
                         >
                             <Badge className='text-sm mt-2 bg-blue-600 text-white'>
                                 {showAll ? 'Show Less' : 'See More'}
                             </Badge>
-                        </button>
+                        </motion.button>
                     </div>
                 )}
             </div>
-        </div>
+        </motion.div>
     );
 };
 

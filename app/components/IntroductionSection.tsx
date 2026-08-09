@@ -6,17 +6,21 @@ import { faEnvelope, faLink, faLocationDot } from "@fortawesome/free-solid-svg-i
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { containerVariants, itemVariants, titleVariants } from "@/lib/animations";
 
 const IntroductionSection = () => {
   return (
-    <div className="flex flex-col items-start justify-start w-full h-full sm:mt-6 mt-3">
+    <motion.div
+      className="flex flex-col items-start justify-start w-full h-full sm:mt-6 mt-3"
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+    >
       <div className="flex flex-row md:flow-col sm:flex-row item-start sm:items-center justify-between gap-4 lg:px-25 ml-5 md:ml-16 mt-25 md:px-0 sm:px-0">
         <div className="flex-3/4 sm:flex-2 space-y-4">
           {/* Heading */}
           <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            variants={titleVariants}
             className="text-2xl sm:text-4xl flex flex-row font-bold text-gray-900 dark:text-white"
           >
             {`Hi, I'm Jasjeev Singh K. 👋🏻`}
@@ -24,9 +28,7 @@ const IntroductionSection = () => {
 
           {/* Paragraph */}
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            variants={itemVariants}
             className="text-sm sm:text-lg text-gray-600 dark:text-gray-300"
           >
             {`Spring Boot and Full Stack Web Developer with a passion for building dynamic, scalable applications. Currently, I'm also exploring the exciting field of AI/ML to expand my skill set.`}
@@ -34,9 +36,7 @@ const IntroductionSection = () => {
 
           {/* Location */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            variants={itemVariants}
             className="align-center justify-start"
           >
             <p className="text-sm sm:text-lg flex items-center gap-2">
@@ -47,9 +47,7 @@ const IntroductionSection = () => {
 
           {/* Social links - desktop */}
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5 }}
+            variants={itemVariants}
             className="hidden sm:flex align-center text-sm sm:text-lg justify-start px-1 mt-7 flex flex-row gap-2 sm:gap-10"
           >
             {[
@@ -77,11 +75,9 @@ const IntroductionSection = () => {
 
         {/* Profile image - desktop */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.7, delay: 0.4 }}
+          variants={itemVariants}
           whileHover={{ scale: 1.05 }}
-          className="hidden sm:flex animate-slide-in-up flex items-start sm:items-center justify-center"
+          className="hidden sm:flex flex items-start sm:items-center justify-center"
         >
           <GlareCard className="flex sm:flex flex-col w-30 h-30 sm:w-50 sm:h-50">
             <div className="relative w-30 h-30 sm:w-50 sm:h-50 rounded-md sm:rounded-2xl overflow-hidden group">
@@ -99,9 +95,7 @@ const IntroductionSection = () => {
 
         {/* Profile image - mobile */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.7, delay: 0.4 }}
+          variants={itemVariants}
           whileHover={{ scale: 1.05 }}
           className="flex-1/4 sm:hidden flex items-start sm:items-center justify-center"
         >
@@ -122,9 +116,7 @@ const IntroductionSection = () => {
 
       {/* Social links - mobile */}
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.5 }}
+        variants={itemVariants}
         className="flex sm:hidden align-center text-sm sm:text-lg justify-start px-1 mt-7 flex flex-row gap-7 ml-4 sm:gap-10"
       >
         {[
@@ -148,7 +140,7 @@ const IntroductionSection = () => {
           </motion.a>
         ))}
       </motion.div>
-    </div>
+    </motion.div>
   );
 };
 
