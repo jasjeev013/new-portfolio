@@ -14,10 +14,10 @@ export default function ScrollAnimationWrapper({
 }) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 30, filter: "blur(4px)" }}
-      whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+      initial={{ opacity: 0, y: 8 }}
+      whileInView={{ opacity: 1, y: 0 }}
       viewport={viewportConfig}
-      transition={{ duration: 0.6, ease: "easeOut", delay }}
+      transition={{ duration: 0.4, ease: "easeOut", delay }}
       className={className}
     >
       {children}

@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { toast } from 'sonner';
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 import { motion } from 'framer-motion';
-import { containerVariants, itemVariants, titleVariants, viewportConfig } from '@/lib/animations';
+import { containerVariants, itemVariants, viewportConfig } from '@/lib/animations';
 
 const ContactMe = () => {
   const [formData, setFormData] = useState({
@@ -67,29 +67,26 @@ const ContactMe = () => {
   return (
     <motion.div
       id='contactMe'
-      className='lg:px-25 px-0 ml-5 md:ml-16 mt-15'
+      className='mt-16 scroll-mt-20'
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
       viewport={viewportConfig}
     >
-      <motion.h1
-        variants={titleVariants}
-        className="text-3xl font-bold text-gray-900 dark:text-white"
-      >
-        Contact Me
-      </motion.h1>
+      <h2 className="font-mono text-xs tracking-widest uppercase text-muted-foreground">
+        Contact
+      </h2>
 
       <motion.form
         variants={itemVariants}
-        className='mx-10 sm:mx-40 mt-10'
+        className='mt-6'
         onSubmit={handleSubmit}
         aria-label="Contact form"
-      > 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+      >
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
           <div>
-            <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-              First Name *
+            <label htmlFor="firstName" className="block text-xs font-mono text-muted-foreground mb-1">
+              First name *
             </label>
             <input
               type="text"
@@ -97,15 +94,15 @@ const ContactMe = () => {
               name="firstName"
               value={formData.firstName}
               onChange={handleChange}
-              className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white"
+              className="w-full px-3 py-2 text-sm border border-border rounded-sm bg-transparent focus:outline-none focus:border-accent transition-colors"
               required
               aria-required="true"
             />
           </div>
 
           <div>
-            <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-              Last Name *
+            <label htmlFor="lastName" className="block text-xs font-mono text-muted-foreground mb-1">
+              Last name *
             </label>
             <input
               type="text"
@@ -113,7 +110,7 @@ const ContactMe = () => {
               name="lastName"
               value={formData.lastName}
               onChange={handleChange}
-              className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white"
+              className="w-full px-3 py-2 text-sm border border-border rounded-sm bg-transparent focus:outline-none focus:border-accent transition-colors"
               required
               aria-required="true"
             />
@@ -121,7 +118,7 @@ const ContactMe = () => {
         </div>
 
         <div className="mb-4">
-          <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+          <label htmlFor="email" className="block text-xs font-mono text-muted-foreground mb-1">
             Email *
           </label>
           <input
@@ -130,14 +127,14 @@ const ContactMe = () => {
             name="email"
             value={formData.email}
             onChange={handleChange}
-            className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white"
+            className="w-full px-3 py-2 text-sm border border-border rounded-sm bg-transparent focus:outline-none focus:border-accent transition-colors"
             required
             aria-required="true"
           />
         </div>
 
         <div className="mb-6">
-          <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+          <label htmlFor="message" className="block text-xs font-mono text-muted-foreground mb-1">
             Message *
           </label>
           <textarea
@@ -146,22 +143,20 @@ const ContactMe = () => {
             rows={4}
             value={formData.message}
             onChange={handleChange}
-            className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white"
+            className="w-full px-3 py-2 text-sm border border-border rounded-sm bg-transparent focus:outline-none focus:border-accent transition-colors"
             required
             aria-required="true"
           />
         </div>
 
-        <motion.button
+        <button
           type="submit"
           disabled={isSubmitting}
-          whileHover={{ scale: 1.02 }}
-          whileTap={{ scale: 0.98 }}
-          className={`w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
+          className={`px-5 py-2 text-sm font-medium rounded-sm bg-foreground text-background hover:opacity-90 transition-opacity ${isSubmitting ? 'opacity-60 cursor-not-allowed' : ''}`}
           aria-disabled={isSubmitting}
         >
-          {isSubmitting ? 'Sending...' : 'Submit'}
-        </motion.button>
+          {isSubmitting ? 'Sending...' : 'Send message'}
+        </button>
       </motion.form>
     </motion.div>
   );

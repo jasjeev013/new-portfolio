@@ -1,9 +1,8 @@
 'use client';
-import { Badge } from '@/components/ui/badge'
-import React, { useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import ProjectCard from './ProjectCard';
 import { motion, AnimatePresence } from "framer-motion";
-import { containerVariants, itemVariants, titleVariants, viewportConfig } from '@/lib/animations';
+import { containerVariants, itemVariants, viewportConfig } from '@/lib/animations';
 
 const projects = [
     {
@@ -74,64 +73,54 @@ const Project = () => {
     };
 
     return (
-        <>
-            <motion.div
-                id='projects'
-                ref={projectSectionRef}
-                className='bg-red lg:px-25 md:px-0 sm:px-0 ml-5 md:ml-16 mt-15'
-                variants={containerVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={viewportConfig}
-            >
-                <motion.h1
-                    variants={titleVariants}
-                    className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white"
-                >
-                    Projects
-                </motion.h1>
+        <motion.div
+            id='projects'
+            ref={projectSectionRef}
+            className='mt-16 scroll-mt-20'
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportConfig}
+        >
+            <h2 className="font-mono text-xs tracking-widest uppercase text-muted-foreground">
+                Projects
+            </h2>
 
-                <div className="container mx-auto px-5 sm:px-14 py-12">
-                    <div className="grid grid-cols-1 md:grid-cols-2 p-2 lg:grid-cols-2 gap-7">
-                        <AnimatePresence>
-                            {visibleProjects.map((project, index) => (
-                                <motion.div
-                                    key={index}
-                                    variants={itemVariants}
-                                    exit={{ opacity: 0, scale: 0.9 }}
-                                    whileHover={{ scale: 1.02 }}
-                                >
-                                    <ProjectCard
-                                        videoUrl={project.videoUrl}
-                                        title={project.title}
-                                        description={project.description}
-                                        technologies={project.technologies}
-                                        linksName={project.linksName}
-                                        links={project.links}
-                                    />
-                                </motion.div>
-                            ))}
-                        </AnimatePresence>
-                    </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-4">
+                <AnimatePresence>
+                    {visibleProjects.map((project) => (
+                        <motion.div
+                            key={project.title}
+                            initial="hidden"
+                            animate="visible"
+                            exit={{ opacity: 0 }}
+                            variants={itemVariants}
+                        >
+                            <ProjectCard
+                                videoUrl={project.videoUrl}
+                                title={project.title}
+                                description={project.description}
+                                technologies={project.technologies}
+                                linksName={project.linksName}
+                                links={project.links}
+                            />
+                        </motion.div>
+                    ))}
+                </AnimatePresence>
+            </div>
 
-                    {projects.length > 4 && (
-                        <div className='flex mr-5 justify-end align-end'>
-                            <motion.button
-                                onClick={toggleShowAll}
-                                whileHover={{ scale: 1.05 }}
-                                whileTap={{ scale: 0.95 }}
-                                className="text-sm font-medium text-blue-600 dark:text-blue-400 hover:underline mt-5"
-                                aria-label={showAll ? 'Show fewer projects' : 'Show more projects'}
-                            >
-                                <Badge className='text-sm mt-2 bg-blue-600 text-white'>
-                                    {showAll ? 'Show Less' : 'See More'}
-                                </Badge>
-                            </motion.button>
-                        </div>
-                    )}
+            {projects.length > 4 && (
+                <div className='flex justify-end mt-4'>
+                    <button
+                        onClick={toggleShowAll}
+                        className="font-mono text-xs text-muted-foreground hover:text-accent transition-colors"
+                        aria-label={showAll ? 'Show fewer projects' : 'Show more projects'}
+                    >
+                        {showAll ? '← show less' : 'see more →'}
+                    </button>
                 </div>
-            </motion.div>
-        </>
+            )}
+        </motion.div>
     )
 }
 

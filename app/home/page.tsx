@@ -13,8 +13,8 @@ import ScrollAnimationWrapper from '../components/ScrollAnimationWrapper'
 // This is a static page, no need for client-side rendering
 export default function HomePage() {
     return (
-        <div className="w-full min-h-screen flex items-center justify-center bg-[#F0E3E3] dark:bg-[#1C1C1E]">
-            <div className="w-full xl:w-[calc(75rem)] lg:w-[calc(100%-2rem)] md:w-full sm:w-full min-h-screen sm:p-4">
+        <div className="w-full min-h-screen flex items-center justify-center bg-background">
+            <div className="w-full max-w-3xl px-5 sm:px-0 min-h-screen">
                 <Navbar />
                 <IntroductionSection />
                 <ScrollAnimationWrapper><AboutSection /></ScrollAnimationWrapper>

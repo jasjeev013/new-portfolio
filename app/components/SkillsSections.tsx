@@ -1,7 +1,7 @@
 "use client";
 import { Badge } from '@/components/ui/badge'
 import { motion } from 'framer-motion';
-import { containerVariants, itemVariants, titleVariants, viewportConfig } from '@/lib/animations';
+import { containerVariants, itemVariants, viewportConfig } from '@/lib/animations';
 
 const skills = [
   { label: "Frontend", items: ["JavaScript", "React", "Angular", "Tailwind CSS", "TypeScript", "Next.js"] },
@@ -16,31 +16,28 @@ const SkillsSections = () => {
     return (
         <motion.div
             id='skills'
-            className='bg-red lg:px-25 md:px-0 sm:px-0 ml-5 md:ml-16 mt-15'
+            className='mt-16'
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
             viewport={viewportConfig}
         >
-            <motion.h1
-                variants={titleVariants}
-                className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white"
-            >
+            <h2 className="font-mono text-xs tracking-widest uppercase text-muted-foreground">
                 Skills
-            </motion.h1>
-            <div className="space-y-3 px-5 mt-5">
+            </h2>
+            <div className="space-y-4 mt-4">
                 {skills.map(({ label, items }) => (
                     <motion.div
                         key={label}
                         variants={itemVariants}
-                        className="flex items-start sm:items-center flex-col sm:flex-row gap-4"
+                        className="flex items-start flex-col sm:flex-row sm:items-center gap-2 sm:gap-4"
                     >
-                        <span className="font-bold text-xl min-w-[80px]">
-                            {label}:
+                        <span className="text-sm font-medium text-foreground min-w-[110px]">
+                            {label}
                         </span>
-                        <div className="flex flex-wrap gap-2 sm:ml-3">
+                        <div className="flex flex-wrap gap-2">
                             {items.map(skill => (
-                                <Badge key={skill}>{skill}</Badge>
+                                <Badge key={skill} variant="tag">{skill}</Badge>
                             ))}
                         </div>
                     </motion.div>

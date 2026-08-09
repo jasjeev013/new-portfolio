@@ -46,7 +46,7 @@ const socialLinks = [
 const FooterSection = () => {
     return (
         <>
-            <Separator className="mt-15" />
+            <Separator className="mt-16" />
             <motion.footer
                 className="w-full py-8"
                 variants={containerVariants}
@@ -54,32 +54,30 @@ const FooterSection = () => {
                 whileInView="visible"
                 viewport={viewportConfig}
             >
-                <div className="max-w-4xl mx-auto px-4">
-                    <motion.div
-                        variants={itemVariants}
-                        className="flex justify-center space-x-6 mb-4"
-                    >
-                        {socialLinks.map((social) => (
-                            <Link
-                                key={social.name}
-                                href={social.url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-gray-500 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300"
-                                aria-label={`Visit my ${social.name} profile`}
-                            >
-                                {social.icon}
-                            </Link>
-                        ))}
-                    </motion.div>
+                <motion.div
+                    variants={itemVariants}
+                    className="flex justify-center space-x-6 mb-4"
+                >
+                    {socialLinks.map((social) => (
+                        <Link
+                            key={social.name}
+                            href={social.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-muted-foreground hover:text-accent transition-colors"
+                            aria-label={`Visit my ${social.name} profile`}
+                        >
+                            {social.icon}
+                        </Link>
+                    ))}
+                </motion.div>
 
-                    <motion.div
-                        variants={itemVariants}
-                        className="text-center text-gray-500 dark:text-gray-400 text-sm"
-                    >
-                        © {new Date().getFullYear()} Jasjeev Singh Kohli. All Rights Reserved.
-                    </motion.div>
-                </div>
+                <motion.div
+                    variants={itemVariants}
+                    className="text-center text-muted-foreground font-mono text-xs"
+                >
+                    © {new Date().getFullYear()} Jasjeev Singh Kohli
+                </motion.div>
             </motion.footer>
         </>
     );

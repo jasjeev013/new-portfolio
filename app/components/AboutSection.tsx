@@ -1,18 +1,17 @@
 import Link from 'next/link'
 
-// This component can be fully server-rendered
 const AboutSection = () => {
     return (
-        <div className='bg-red lg:px-25 ml-5 md:ml-16 mt-20 md:px-0 sm:px-0'>
-            <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">
-                About Me
-            </h1>
-            <p className="text-md sm:text-lg mt-2 text-black dark:text-gray-300">
+        <div className='mt-16'>
+            <h2 className="font-mono text-xs tracking-widest uppercase text-muted-foreground">
+                About
+            </h2>
+            <p className="text-sm sm:text-base leading-relaxed mt-3 text-foreground max-w-xl">
                 {`I'm Jasjeev Singh`}, currently working as a Software Development Engineer at ION Group, where I contribute as a developer and analyst on DDPM projects. I completed my B.Tech from{" "}
                 <Link
                     href="https://mait.ac.in/"
                     target="_blank"
-                    className="text-black dark:text-white hover:underline"
+                    className="text-foreground underline underline-offset-2 decoration-border hover:decoration-accent"
                 >
                     Maharaja Agrasen Institute of Technology
                 </Link>
