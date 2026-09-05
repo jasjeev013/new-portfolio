@@ -16,7 +16,7 @@ const ProjectCard = ({ videoUrl, title, description, technologies, links, linksN
 
   useEffect(() => {
     if (videoRef.current) {
-      videoRef.current.play().catch(() => {});
+      videoRef.current.play().catch((err) => { console.warn('Autoplay blocked:', err); });
     }
   }, []);
 

@@ -91,8 +91,6 @@ const Project = () => {
                     {visibleProjects.map((project) => (
                         <motion.div
                             key={project.title}
-                            initial="hidden"
-                            animate="visible"
                             exit={{ opacity: 0 }}
                             variants={itemVariants}
                         >

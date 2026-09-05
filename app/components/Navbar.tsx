@@ -34,7 +34,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="sticky top-0 z-50 -mx-4 sm:mx-0 border-b border-border bg-background/95 backdrop-blur-none">
+    <nav className="sticky top-0 z-50 -mx-4 sm:mx-0 border-b border-border bg-background/95">
       <div className="flex items-center justify-between h-14 px-4 sm:px-0 font-mono text-sm">
         <div className="flex items-center gap-4 sm:gap-7 overflow-x-auto no-scrollbar">
           {links.map((link) => (
@@ -49,15 +49,15 @@ const Navbar = () => {
           ))}
         </div>
 
-        <button
-          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-          className="text-muted-foreground hover:text-foreground transition-colors"
-          aria-label="Toggle theme"
-        >
-          {mounted && (
+        {mounted && (
+          <button
+            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            className="text-muted-foreground hover:text-foreground transition-colors"
+            aria-label="Toggle theme"
+          >
             <FontAwesomeIcon icon={theme === "dark" ? faSun : faMoon} />
-          )}
-        </button>
+          </button>
+        )}
       </div>
     </nav>
   );

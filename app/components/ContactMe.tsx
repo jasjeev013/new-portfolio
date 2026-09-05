@@ -152,8 +152,7 @@ const ContactMe = () => {
         <button
           type="submit"
           disabled={isSubmitting}
-          className={`px-5 py-2 text-sm font-medium rounded-sm bg-foreground text-background hover:opacity-90 transition-opacity ${isSubmitting ? 'opacity-60 cursor-not-allowed' : ''}`}
-          aria-disabled={isSubmitting}
+          className={`px-5 py-2 text-sm font-medium rounded-sm bg-foreground text-background hover:opacity-90 transition-opacity ${isSubmitting ? 'opacity-60' : ''}`}
         >
           {isSubmitting ? 'Sending...' : 'Send message'}
         </button>

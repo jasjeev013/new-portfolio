@@ -106,8 +106,6 @@ const HackathonsSection = () => {
                     {visibleHackathons.map((hackathon) => (
                         <motion.div
                             key={hackathon.id}
-                            initial="hidden"
-                            animate="visible"
                             variants={itemVariants}
                             className="flex items-start gap-4 py-4"
                             exit={{ opacity: 0 }}
