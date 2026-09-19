@@ -11,3 +11,7 @@ yarn-error.log*
 coverage
 out
 README.md
+.github
+docs
+Dockerfile.dev
+docker-compose*.yml
