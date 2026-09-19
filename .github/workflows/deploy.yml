@@ -19,4 +19,5 @@ jobs:
           echo "Deploy target is not configured yet."
           echo "Requested image: ghcr.io/${{ github.repository }}:${{ inputs.image_tag }}"
           echo "Next step: SSH into the target server (or use an action like appleboy/ssh-action) and run 'docker pull'/'docker compose up -d' with this image tag."
+          echo "The container also needs EMAIL_USER, EMAIL_PASS, and RECAPTCHA_SECRET_KEY set at runtime (via env_file/-e flags) — these are read at request time by app/api/contact/route.ts, not baked into the image."
           exit 1
