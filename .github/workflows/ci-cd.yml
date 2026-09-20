@@ -2,9 +2,7 @@ name: CI/CD
 
 on:
   push:
-    branches: ['**']
-  pull_request:
-    branches: ['**']
+    branches: [main]
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -39,7 +37,6 @@ jobs:
   build:
     name: Build Docker image
     needs: validate
-    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -56,6 +53,8 @@ jobs:
           push: false
           load: true
           tags: new-portfolio:ci-${{ github.sha }}
+          build-args: |
+            NEXT_PUBLIC_RECAPTCHA_SITE_KEY=${{ secrets.NEXT_PUBLIC_RECAPTCHA_SITE_KEY }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
@@ -74,7 +73,6 @@ jobs:
   publish:
     name: Publish Docker image
     needs: build
-    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -110,5 +108,7 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+          build-args: |
+            NEXT_PUBLIC_RECAPTCHA_SITE_KEY=${{ secrets.NEXT_PUBLIC_RECAPTCHA_SITE_KEY }}
           cache-from: type=gha
           cache-to: type=gha,mode=max

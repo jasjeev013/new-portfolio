@@ -22,19 +22,28 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 
 ## Docker
 
+Both modes expect a `.env.local` file in the project root with:
+
+```
+NEXT_PUBLIC_RECAPTCHA_SITE_KEY=   # baked in at build time (inlined into the client bundle)
+RECAPTCHA_SECRET_KEY=             # read at runtime by app/api/contact/route.ts
+EMAIL_USER=                       # Gmail address used by nodemailer
+EMAIL_PASS=                       # Gmail App Password (not your account password)
+```
+
 **Development** (hot reload, bind-mounted source):
 
 ```bash
-docker compose -f docker-compose.dev.yml up --build
+docker compose --env-file .env.local -f docker-compose.dev.yml up --build
 ```
 
 **Production** (multi-stage build, standalone Next.js output):
 
 ```bash
-docker compose -f docker-compose.prod.yml up --build -d
+docker compose --env-file .env.local -f docker-compose.prod.yml up --build -d
 ```
 
-Both expect a `.env.local` file in the project root (see `.env.local` for the expected keys) and serve the app on [http://localhost:3000](http://localhost:3000).
+`--env-file .env.local` is required (not just `env_file:` in the compose file) because `NEXT_PUBLIC_RECAPTCHA_SITE_KEY` must reach the production build as a Docker build-arg, and Compose only substitutes `${VAR}` references from the file passed via `--env-file`. Both modes serve the app on [http://localhost:3000](http://localhost:3000).
 
 ## Learn More
 
