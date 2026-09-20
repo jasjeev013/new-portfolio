@@ -2,9 +2,7 @@ name: CI/CD
 
 on:
   push:
-    branches: ['**']
-  pull_request:
-    branches: ['**']
+    branches: [main]
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -39,7 +37,6 @@ jobs:
   build:
     name: Build Docker image
     needs: validate
-    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -76,7 +73,6 @@ jobs:
   publish:
     name: Publish Docker image
     needs: build
-    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     runs-on: ubuntu-latest
     permissions:
       contents: read
